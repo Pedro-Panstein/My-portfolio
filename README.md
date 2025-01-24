@@ -1,63 +1,64 @@
-# Meu Portfólio Pessoal
+# My Personal Portfolio
 
-Este é o repositório do meu portfólio pessoal, desenvolvido para apresentar minhas habilidades, projetos e experiência como desenvolvedor frontend e backend.
+This is the repository for my personal portfolio, developed to showcase my skills, projects, and experience as a frontend and backend developer.
 
-Acesse meu portfólio online em: **[meu-site.com](#)**
-
----
-
-## Tecnologias Utilizadas
-
-Este projeto foi construído com as seguintes tecnologias:
-
-- **React.js**: Framework para desenvolvimento de interfaces de usuário.
-- **Styled-components**: Para estilização dos componentes.
-- **React Router**: Gerenciamento de rotas.
-- **JavaScript (ES6+)**: Base da lógica de programação.
-- **HTML5 e Tailwindcss**: Estrutura e design responsivo.
+Access my online portfolio at: **[my-website.com](#)**
 
 ---
 
-## Funcionalidades
+## Technologies Used
 
-- **Página Inicial**: Uma apresentação pessoal clara e objetiva.
-- **Portfólio de Projetos**: Galeria com meus principais trabalhos, incluindo links para o repositório e/ou demonstração.
-- **Habilidades**: Lista das minhas principais competências e ferramentas que domino.
-- **Contato**: Formulário para entrar em contato diretamente comigo.
+This project was built with the following technologies:
+
+- **React.js**: Framework for building user interfaces.
+- **Styled-components**: For component styling.
+- **React Router**: Route management.
+- **JavaScript (ES6+)**: Base for programming logic.
+- **HTML5 and TailwindCSS**: Structure and responsive design.
 
 ---
 
-## Como Rodar o Projeto
+## Features
 
-1. Clone o repositório:
+- **Home Page**: A clear and objective personal introduction.
+- **Projects Portfolio**: Gallery showcasing my main works, including links to the repository and/or demo.
+- **Skills**: List of my main competencies and tools I am proficient in.
+- **Contact**: Form to get in touch with me directly.
+
+---
+
+## How to Run the Project
+
+1. Clone the repository:
 
    ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
+   git clone https://github.com/your-username/your-repository.git
    ```
 
-2. Acesse a pasta do projeto:
+2. Go to the project folder:
 
    ```bash
    cd meu-portifolio
    ```
 
-3. Instale as dependências:
+3. Install the dependencies:
 
    ```bash
    npm install
    ```
 
-4. Inicie o servidor de desenvolvimento:
+4. Start the development server:
+
    ```bash
    npm start
    ```
 
-5. Abra o navegador em http://localhost:3000
+5. Open your browser at http://localhost:3000
 
-## Autor
+## Author
 
 ### Pedro Henrique Panstein
 
- - **Linkedin**: 
- - **E-mail**: pansteinph@gmail.com
- - **Portifólio Online**: [meu-site.com](#)
+- **Linkedin**: --
+- **Email**: pansteinph@gmail.com
+- **Online Portfolio**: [meu-site.com](#)
