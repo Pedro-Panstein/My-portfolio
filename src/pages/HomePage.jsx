@@ -14,49 +14,13 @@ import java from "../assets/java.svg";
 import spring from "../assets/spring.png";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import useLanguage from "../hooks/useLanguage";
+import { translations } from "../locales/translation"; // Importando o arquivo de traduções
 
 export default function HomePage() {
   const language = useLanguage();
 
-  // Texto para os idiomas
-  const texts = {
-    pt: {
-      hello: "Hello World! Meu nome é",
-      hello2: "e sou",
-      jobTitle: "Desenvolvedor Fullstack",
-      description:
-        "Transformo necessidades em aplicações reais, evolventes e funcionais. Desenvolvo sistemas através da minha paixão pela tecnologia, contribuindo com soluções inovadoras e eficazes para desafios complexos.",
-      github: "Github",
-      html: "HTML",
-      css: "CSS",
-      javascript: "Javascript",
-      react: "React",
-      angular: "Angular",
-      java: "Java",
-      spring: "Spring",
-      mysql: "My SQL",
-      nodejs: "Node.js",
-    },
-    en: {
-      hello: "Hello World! My name is",
-      hello2: "and i am a",
-      jobTitle: "Fullstack Developer",
-      description:
-        "I turn needs into real, evolving, and functional applications. I develop systems through my passion for technology, contributing innovative and effective solutions to complex challenges.",
-      github: "Github",
-      html: "HTML",
-      css: "CSS",
-      javascript: "JavaScript",
-      react: "React",
-      angular: "Angular",
-      java: "Java",
-      spring: "Spring",
-      mysql: "My SQL",
-      nodejs: "Node.js",
-    },
-  };
-
-  const currentTexts = texts[language];
+  // Agora as traduções vêm do arquivo importado
+  const currentTexts = translations[language];
 
   return (
     <>
