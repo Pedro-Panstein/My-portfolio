@@ -4,7 +4,7 @@ import Habilitie from "../Components/Habilitie";
 import {
   FaAngular,
   FaCss3,
-  FaGithub,
+  FaGitAlt,
   FaHtml5,
   FaNodeJs,
   FaReact,
@@ -15,6 +15,7 @@ import spring from "../assets/spring.png";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import useLanguage from "../hooks/useLanguage";
 import { translations } from "../locales/translation"; // Importando o arquivo de traduções
+import AboutMe from "../Components/AboutMe";
 
 export default function HomePage() {
   const language = useLanguage();
@@ -43,12 +44,12 @@ export default function HomePage() {
           <p className="w-[800px] text-center text-white font-maven-pro text-md m-0 p-0">
             {currentTexts.description}
           </p>
-          <div className="flex gap-5 mt-10">
+          <div className="flex flex-wrap justify-center gap-5 mt-10">
             <Habilitie
-              icon={<FaGithub />}
+              icon={<FaGitAlt />}
               title={currentTexts.github}
-              url={"https://github.com/Pedro-Panstein"}
-              className="text-2xl"
+              url={"https://git-scm.com"}
+              className="text-2xl text-[#F4511E]"
             />
             <Habilitie
               icon={<FaHtml5 className="text-[#E3646E] text-2xl" />}
@@ -76,7 +77,7 @@ export default function HomePage() {
               url={"https://angular.dev"}
             />
           </div>
-          <div className="flex gap-5 mt-5">
+          <div className="flex flex-wrap justify-center gap-5 mt-5">
             <Habilitie
               icon={java}
               title={currentTexts.java}
@@ -100,6 +101,8 @@ export default function HomePage() {
           </div>
           <MdKeyboardDoubleArrowDown className="absolute text-4xl text-gray-600 animate-bounce bottom-5" />
         </div>
+        <AboutMe />
+        <div className="h-[100vh]"></div>
       </div>
     </>
   );
