@@ -132,6 +132,41 @@ export default function HomePage() {
           ))}
         </div>
 
+        <div className="flex flex-wrap justify-center gap-5 mt-5">
+          {[
+            {
+              icon: java,
+              title: currentTexts.java,
+              url: "https://www.java.com/pt-BR/",
+            },
+            {
+              icon: spring,
+              title: currentTexts.spring,
+              url: "https://spring.io",
+            },
+            {
+              icon: <GrMysql className="text-[#00758F] text-2xl" />,
+              title: currentTexts.css,
+              url: "https://www.mysql.com",
+            },
+            {
+              icon: <FaNodeJs className="text-[#82BC4F] text-2xl" />,
+              title: currentTexts.javascript,
+              url: "https://nodejs.org/pt",
+            },
+          ].map((habilitie, index) => (
+            <motion.div
+              key={index}
+              initial="hidden"
+              whileInView="visible"
+              variants={fadeInVariants}
+              viewport={{ once: false }} // Permite refazer a animação ao voltar
+            >
+              <Habilitie {...habilitie} />
+            </motion.div>
+          ))}
+        </div>
+
         {/* Botão de Scroll */}
         <motion.div
           initial={{ opacity: 0 }}

@@ -5,7 +5,7 @@ export const translations = {
     jobTitle: "Desenvolvedor Fullstack",
     description:
       "Transformo necessidades em aplicações reais, evolventes e funcionais. Desenvolvo sistemas através da minha paixão pela tecnologia, contribuindo com soluções inovadoras e eficazes para desafios complexos.",
-    github: "Git",
+    github: "GIT",
     html: "HTML",
     css: "CSS",
     javascript: "Javascript",
