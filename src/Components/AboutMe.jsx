@@ -16,7 +16,7 @@ export default function AboutMe() {
         <h2 className="font-inconsolata text-[#13CD51] text-xl">
           {currentTexts.aboutMeTitle}
         </h2>
-        <div className="bg-[#0f1114] border-[#44464b] border-2 rounded-lg p-10 mt-10">
+        <div className="bg-[#0f1114] border-[#38393C] border-2 rounded-lg p-10 mt-10">
           <div className="flex gap-10">
             <img
               src={aboutMePhoto}
