@@ -23,6 +23,39 @@ export const translations = {
     aboutMeJobTitle: "Desenvolvedor Fullstack",
     aboutMeDescription:
       "Meu nome é Pedro Henrique, sou um desenvolvedor Fullstack apaixonado por tecnologia e inovação. Transformo ideias em soluções digitais, unindo criatividade e eficiência. Com foco em desenvolvimento frontend e backend, busco entregar projetos funcionais, modernos e intuitivos. Adoro desafios e estou sempre aprendendo algo novo para elevar minhas habilidades e criar experiências incríveis.",
+
+    // Traduções do componente MyWork
+    myWorkTitle: "Meu Trabalho",
+    myWorkSubtitle: "Veja os projetos em destaque",
+    projects: [
+      {
+        title: "Machine Management",
+        description:
+          "Site para gerenciamento de máquinas em tempo real, utilizando Docker, Kafka e dashboards como Prometheus e Grafana.",
+      },
+      {
+        title: "Panstein Library",
+        description: "CRUD de uma livraria utilizando Angular",
+      },
+      {
+        title: "Crud Users",
+        description: "CRUD integrado com banco de dados usando Angular",
+      },
+      {
+        title: "Cursores CSS",
+        description:
+          "Site informativo sobre todos os cursores do CSS e como utilizá-los.",
+      },
+      {
+        title: "Coca",
+        description:
+          "Landing page moderna e simples de um serviço chamado COCA.",
+      },
+      {
+        title: "Mais informações em breve",
+        description: "Logo será adicionado um novo projeto.",
+      },
+    ],
   },
   en: {
     hello: "Hello World! My name is",
@@ -48,5 +81,38 @@ export const translations = {
     aboutMeJobTitle: "Fullstack Developer",
     aboutMeDescription:
       "My name is Pedro Henrique, I am a Fullstack developer passionate about technology and innovation. I transform ideas into digital solutions, combining creativity and efficiency. Focused on frontend and backend development, I aim to deliver functional, modern, and intuitive projects. I love challenges and I am always learning something new to enhance my skills and create amazing experiences.",
+
+    // Traduções do componente MyWork
+    myWorkTitle: "My Work",
+    myWorkSubtitle: "Check out the featured projects",
+    projects: [
+      {
+        title: "Machine Management",
+        description:
+          "A site for real-time machine management using Docker, Kafka, and dashboards like Prometheus and Grafana.",
+      },
+      {
+        title: "Panstein Library",
+        description: "Library CRUD built with Angular.",
+      },
+      {
+        title: "Crud Users",
+        description: "CRUD integrated with a database using Angular.",
+      },
+      {
+        title: "Cursores CSS",
+        description:
+          "Informative site about all CSS cursors and how to use them.",
+      },
+      {
+        title: "Coca",
+        description:
+          "Modern and simple landing page for a service called COCA.",
+      },
+      {
+        title: "More information coming soon",
+        description: "A new project will be added soon.",
+      },
+    ],
   },
 };

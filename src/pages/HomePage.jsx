@@ -18,6 +18,7 @@ import spring from "../assets/spring.png";
 import useLanguage from "../hooks/useLanguage";
 import { translations } from "../locales/translation";
 import AboutMe from "../Components/AboutMe";
+import MyWork from "../Components/MyWork";
 
 export default function HomePage() {
   const language = useLanguage();
@@ -175,7 +176,7 @@ export default function HomePage() {
         >
           <MdKeyboardDoubleArrowDown
             onClick={scrollToAboutMe}
-            className="absolute text-4xl text-gray-600 cursor-pointer bottom-5"
+            className="absolute text-4xl text-gray-600 transform -translate-x-1/2 cursor-pointer left-1/2 bottom-5"
           />
         </motion.div>
       </div>
@@ -184,7 +185,10 @@ export default function HomePage() {
       <div ref={aboutMeRef}>
         <AboutMe />
       </div>
-      <div className="h-[200vh]"></div>
+      <div>
+        <MyWork />
+      </div>
+      <div className="h-[100vh]"></div>
     </div>
   );
 }
