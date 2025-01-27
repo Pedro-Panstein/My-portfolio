@@ -189,7 +189,7 @@ export default function HomePage() {
       <div ref={aboutMeRef}>
         <AboutMe />
       </div>
-      <div>
+      <div className="pt-24">
         <MyWork />
       </div>
       <div className="pt-24">
