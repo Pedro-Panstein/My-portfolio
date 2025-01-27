@@ -77,6 +77,11 @@ export const translations = {
           "Aprimoramento de performance e otimização para mecanismos de busca, com maior alcance para o público-alvo.",
       },
     ],
+
+    // Traduções do componente ContactMe
+    footerTitle: "Contato",
+    footerSubtitle: "Vamos trabalhar juntos!",
+    footerDescription: "Entre em contato ou acompanhe as minhas redes sociais!",
   },
   en: {
     hello: "Hello World! My name is",
@@ -156,5 +161,10 @@ export const translations = {
           "Performance enhancement and optimization for search engines, increasing reach to the target audience.",
       },
     ],
+
+    // Traduções do componente ContactMe
+    footerTitle: "Contact",
+    footerSubtitle: "Let's work together!",
+    footerDescription: "Get in touch or follow my social media!",
   },
 };

@@ -5,11 +5,12 @@ import {
   FaCss3,
   FaGitAlt,
   FaHtml5,
+  FaInstagram,
   FaNodeJs,
   FaReact,
 } from "react-icons/fa";
 import { GrMysql } from "react-icons/gr";
-import { MdKeyboardDoubleArrowDown } from "react-icons/md";
+import { MdKeyboardDoubleArrowDown, MdOutlineEmail } from "react-icons/md";
 import { motion } from "framer-motion";
 import myPhoto from "../assets/myPhoto.png";
 import Habilitie from "../Components/Habilitie";
@@ -20,6 +21,8 @@ import { translations } from "../locales/translation";
 import AboutMe from "../Components/AboutMe";
 import MyWork from "../Components/MyWork";
 import MyServices from "../Components/MyServices";
+import { PiGithubLogo, PiLinkedinLogoBold } from "react-icons/pi";
+import Contact from "../Components/Contact";
 
 export default function HomePage() {
   const language = useLanguage();
@@ -192,6 +195,82 @@ export default function HomePage() {
       <div className="pt-24">
         <MyServices />
       </div>
+      <motion.div id="footer" className="flex flex-col items-center justify-center pt-32 text-center">
+        <motion.h3
+          initial="hidden"
+          whileInView="visible"
+          variants={fadeInVariants}
+          viewport={{ once: false }}
+          className="text-[#13CD51] text-xl font-inconsolata"
+        >
+          {currentTexts.footerTitle}
+        </motion.h3>
+        <motion.h2
+          initial="hidden"
+          whileInView="visible"
+          variants={fadeInVariants}
+          viewport={{ once: false }}
+          className="my-2 text-3xl font-semibold text-white font-asap"
+        >
+          {currentTexts.footerSubtitle}
+        </motion.h2>
+        <motion.p
+          initial="hidden"
+          whileInView="visible"
+          variants={fadeInVariants}
+          viewport={{ once: false }}
+          className="font-maven-pro text-[#C0C4CE] text-lg"
+        >
+          {currentTexts.footerDescription}
+        </motion.p>
+        <div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false }}
+          className="flex flex-col items-center justify-center gap-5 mt-10"
+        >
+          {[
+            {
+              icon: <PiLinkedinLogoBold className="text-[#13CD51] text-2xl" />,
+              title: "Linkedin",
+              url: "https://aindaestaporvir.com",
+            },
+            {
+              icon: <MdOutlineEmail className="text-[#13CD51] text-2xl" />,
+              title: "Email",
+              url: "mailto:phpanstein@gmail.com",
+            },
+            {
+              icon: <PiGithubLogo className="text-[#13CD51] text-2xl" />,
+              title: "Github",
+              url: "https://github.com/Pedro-Panstein",
+            },
+            {
+              icon: <FaInstagram className="text-[#13CD51] text-2xl" />,
+              title: "Instagram",
+              url: "https://www.instagram.com/pedro.panstein/",
+            },
+          ].map((contact, index) => (
+            <motion.div
+              key={index}
+              initial={{
+                x: index % 2 === 0 ? "20%" : "-20%", // Alterna entrada: par da direita, ímpar da esquerda
+                opacity: 0,
+              }}
+              whileInView={{ x: 0, opacity: 1 }} // Animação para posição final
+              transition={{
+                duration: 0.6,
+                delay: index * 0.2, // Adiciona atraso para o efeito cascata
+                ease: "easeOut",
+              }}
+              viewport={{ once: false }}
+            >
+              <Contact {...contact} />
+            </motion.div>
+          ))}
+        </div>
+      </motion.div>
+      <p className="text-center text-[#C0C4CE] font-maven-pro pb-5">&copy; {new Date().getFullYear()} Pedro Panstein</p>
     </div>
   );
 }
