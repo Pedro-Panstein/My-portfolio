@@ -56,6 +56,27 @@ export const translations = {
         description: "Logo será adicionado um novo projeto.",
       },
     ],
+
+    // Traduções do componente MyServices
+    myServicesTitle: "Meus Serviços",
+    myServicesSubtitle: "Como posso ajudar seu negócio?",
+    services: [
+      {
+        title: "Websites, landing pages e designs",
+        description:
+          "Soluções de design e interfaces que combinam estética e funcionalidade, garantindo uma experiência envolvente para o usuário.",
+      },
+      {
+        title: "API e banco de dados",
+        description:
+          "Soluções completas de API e banco de dados para conectar sistemas, organizar informações e entregar resultados ágeis.",
+      },
+      {
+        title: "SEO",
+        description:
+          "Aprimoramento de performance e otimização para mecanismos de busca, com maior alcance para o público-alvo.",
+      },
+    ],
   },
   en: {
     hello: "Hello World! My name is",
@@ -112,6 +133,27 @@ export const translations = {
       {
         title: "More information coming soon",
         description: "A new project will be added soon.",
+      },
+    ],
+
+    // Traduções do componente MyServices
+    myServicesTitle: "My Services",
+    myServicesSubtitle: "How can I help your business?",
+    services: [
+      {
+        title: "Websites, landing pages and designs",
+        description:
+          "Design solutions and interfaces that combine aesthetics and functionality, ensuring an engaging user experience.",
+      },
+      {
+        title: "API and database",
+        description:
+          "Complete API and database solutions to connect systems, organize information, and deliver agile results.",
+      },
+      {
+        title: "SEO",
+        description:
+          "Performance enhancement and optimization for search engines, increasing reach to the target audience.",
       },
     ],
   },

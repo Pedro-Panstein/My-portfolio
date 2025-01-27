@@ -19,6 +19,7 @@ import useLanguage from "../hooks/useLanguage";
 import { translations } from "../locales/translation";
 import AboutMe from "../Components/AboutMe";
 import MyWork from "../Components/MyWork";
+import MyServices from "../Components/MyServices";
 
 export default function HomePage() {
   const language = useLanguage();
@@ -188,7 +189,9 @@ export default function HomePage() {
       <div>
         <MyWork />
       </div>
-      <div className="h-[100vh]"></div>
+      <div className="pt-24">
+        <MyServices />
+      </div>
     </div>
   );
 }

@@ -5,12 +5,24 @@ import crudUsers from "../assets/crud-users.png";
 import cursores from "../assets/cursores.png";
 import coca from "../assets/coca.png";
 import emBreve from "../assets/Group 8.png";
+import comingSoon from "../assets/Group 8 (1).png";
 import { translations } from "../locales/translation"; // Importa o objeto de traduções
 import { motion } from "framer-motion"; // Importa o framer-motion
+import useLanguage from "../hooks/useLanguage";
+import { useEffect, useState } from "react";
 
-export default function MyWork({ language = "pt" }) {
-  // Seleciona as traduções com base no idioma
+export default function MyWork() {
+  const [selectedImageCard, setImageCard] = useState(null);
+  const language = useLanguage();
   const t = translations[language];
+
+  useEffect(() => {
+    if (language === "pt") {
+      setImageCard(emBreve);
+    } else {
+      setImageCard(comingSoon);
+    }
+  }, [language]);
 
   // Define os projetos com as traduções
   const projects = [
@@ -51,7 +63,7 @@ export default function MyWork({ language = "pt" }) {
     },
     {
       id: 6,
-      image: emBreve,
+      image: selectedImageCard,
       title: t.projects[5].title,
       description: t.projects[5].description,
     },
@@ -90,7 +102,7 @@ export default function MyWork({ language = "pt" }) {
       </motion.h2>
 
       {/* Projetos com animação */}
-      <div className="flex flex-wrap justify-center gap-10 mt-10">
+      <div className="flex flex-wrap justify-center gap-10 mt-10 w-[1200px] mx-auto">
         {projects.map((project, index) => (
           <motion.div
             key={project.id}
