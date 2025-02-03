@@ -24,6 +24,10 @@ import MyServices from "../Components/MyServices";
 import { PiGithubLogo, PiLinkedinLogoBold } from "react-icons/pi";
 import Contact from "../Components/Contact";
 
+import { useEffect } from "react";
+import { doc, getDoc, setDoc, increment, updateDoc } from "firebase/firestore";
+import { db } from "../firebaseConfig"; // Caminho para o arquivo firebaseConfig.
+
 export default function HomePage() {
   const language = useLanguage();
   const currentTexts = translations[language];
@@ -45,6 +49,39 @@ export default function HomePage() {
       transition: { duration: 0.6, ease: "easeOut" },
     },
   };
+
+  useEffect(() => {
+    const incrementViewCount = async () => {
+      const viewKey = "hasViewed"; // Chave única para identificar a visualização desta página
+
+      // Verifica se o usuário já contou a visualização nesta sessão
+      if (localStorage.getItem(viewKey) === "true") {
+        console.log("Visualização já contabilizada nesta sessão.");
+        return;
+      }
+
+      // Marca no localStorage que a visualização foi contabilizada
+      localStorage.setItem(viewKey, "true");
+
+      const docRef = doc(db, "Banco de acessos", "Portifolio"); // Referência ao Firestore
+
+      try {
+        const docSnap = await getDoc(docRef);
+
+        if (docSnap.exists()) {
+          await updateDoc(docRef, {
+            Visualizações: increment(1),
+          });
+        } else {
+          await setDoc(docRef, { Visualizações: 1 });
+        }
+      } catch (error) {
+        console.error("Erro ao acessar ou atualizar visualizações:", error);
+      }
+    };
+
+    incrementViewCount();
+  }, []);
 
   return (
     <div className="w-full h-full bg-defaultBackground">
@@ -195,7 +232,10 @@ export default function HomePage() {
       <div className="pt-24">
         <MyServices />
       </div>
-      <motion.div id="footer" className="flex flex-col items-center justify-center pt-32 text-center">
+      <motion.div
+        id="footer"
+        className="flex flex-col items-center justify-center pt-32 text-center"
+      >
         <motion.h3
           initial="hidden"
           whileInView="visible"
@@ -270,7 +310,9 @@ export default function HomePage() {
           ))}
         </div>
       </motion.div>
-      <p className="text-center text-[#C0C4CE] font-maven-pro pb-5">&copy; {new Date().getFullYear()} Pedro Panstein</p>
+      <p className="text-center text-[#C0C4CE] font-maven-pro pb-5">
+        &copy; {new Date().getFullYear()} Pedro Panstein
+      </p>
     </div>
   );
 }
