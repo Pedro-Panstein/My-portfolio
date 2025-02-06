@@ -2,7 +2,7 @@
 
 This is the repository for my personal portfolio, developed to showcase my skills, projects, and experience as a frontend and backend developer.
 
-Access my online portfolio at: **[my-website.com](#)**
+Access my online portfolio at: **[pedro-panstein.vercel.app](https://pedro-panstein.vercel.app)**
 
 ---
 
@@ -61,4 +61,4 @@ This project was built with the following technologies:
 
 - **Linkedin**: --
 - **Email**: pansteinph@gmail.com
-- **Online Portfolio**: [meu-site.com](#)
+- **Online Portfolio**: [pedro-panstein.vercel.app](https://pedro-panstein.vercel.app)
