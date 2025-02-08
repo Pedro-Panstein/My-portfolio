@@ -188,12 +188,12 @@ export default function HomePage() {
             },
             {
               icon: <GrMysql className="text-[#00758F] text-2xl" />,
-              title: currentTexts.css,
+              title: currentTexts.mysql,
               url: "https://www.mysql.com",
             },
             {
               icon: <FaNodeJs className="text-[#82BC4F] text-2xl" />,
-              title: currentTexts.javascript,
+              title: currentTexts.nodejs,
               url: "https://nodejs.org/pt",
             },
           ].map((habilitie, index) => (
