@@ -1,7 +1,7 @@
 export default function Card({ image, title, description, url }) {
   return (
     <div
-      className={`p-4 bg-[#292C34] rounded-lg w-[350px] h-[300px] border-transparent border-2 ${
+      className={`p-4 mx-10 bg-[#292C34] rounded-lg max-w-[350px] h-[300px] border-transparent border-2 ${
         url
           ? "hover:border-[#13cd51] transition-colors cursor-pointer"
           : "opacity-50"

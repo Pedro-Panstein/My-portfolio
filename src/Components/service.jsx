@@ -11,7 +11,7 @@ export default function Service({ icon, title, description }) {
   };
 
   return (
-    <div className="w-[350px] h-[250px] p-4 border-2 border-[#16181D] rounded-xl flex flex-col items-start space-y-4 text-center hover:border-[#13CD51] transition-colors">
+    <div className="max-w-[350px] w-full min-h-[250px] h-auto p-4 border-2 border-[#16181D] rounded-xl flex flex-col items-start space-y-4 text-center hover:border-[#13CD51] transition-colors">
       <div className={`${getTextColor()} text-5xl`}>{icon}</div>
       <h2 className="text-lg font-bold text-white text-start">{title}</h2>
       <p className="text-gray-400 text-start">{description}</p>

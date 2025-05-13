@@ -1,21 +1,8 @@
-import React, { useRef } from "react";
-import { IoLogoJavascript } from "react-icons/io";
-import {
-  FaAngular,
-  FaCss3,
-  FaGitAlt,
-  FaHtml5,
-  FaInstagram,
-  FaNodeJs,
-  FaReact,
-} from "react-icons/fa";
-import { GrMysql } from "react-icons/gr";
+import { useRef } from "react";
+import { FaInstagram } from "react-icons/fa";
 import { MdKeyboardDoubleArrowDown, MdOutlineEmail } from "react-icons/md";
 import { motion } from "framer-motion";
 import myPhoto from "../assets/myPhoto.png";
-import Habilitie from "../Components/Habilitie";
-import java from "../assets/java.svg";
-import spring from "../assets/spring.png";
 import useLanguage from "../hooks/useLanguage";
 import { translations } from "../locales/translation";
 import AboutMe from "../Components/AboutMe";
@@ -23,10 +10,30 @@ import MyWork from "../Components/MyWork";
 import MyServices from "../Components/MyServices";
 import { PiGithubLogo, PiLinkedinLogoBold } from "react-icons/pi";
 import Contact from "../Components/Contact";
-
 import { useEffect } from "react";
 import { doc, getDoc, setDoc, increment, updateDoc } from "firebase/firestore";
-import { db } from "../firebaseConfig"; // Caminho para o arquivo firebaseConfig.
+import { db } from "../firebaseConfig";
+import Slider from "../Components/Slider";
+
+import angular from "../assets/tecnologies/angular.png";
+import aws from "../assets/tecnologies/aws.png";
+import docker from "../assets/tecnologies/docker.png";
+import firebase from "../assets/tecnologies/firebase.png";
+import git from "../assets/tecnologies/git.png";
+import js from "../assets/tecnologies/javascript.png";
+import kafka from "../assets/tecnologies/kafka.png";
+import kotlin from "../assets/tecnologies/kotlin.png";
+import kubernetes from "../assets/tecnologies/kubernetes.png";
+import mongoDB from "../assets/tecnologies/mongodb.png";
+import mysql from "../assets/tecnologies/mysql.png";
+import nodejs from "../assets/tecnologies/node.png";
+import python from "../assets/tecnologies/python.png";
+import react from "../assets/tecnologies/react.png";
+import spring from "../assets/tecnologies/spring.png";
+import tailwind from "../assets/tecnologies/tailwind.png";
+import java from "../assets/tecnologies/java.png";
+import next from "../assets/tecnologies/next.png";
+import ts from "../assets/tecnologies/typescript.png";
 
 export default function HomePage() {
   const language = useLanguage();
@@ -83,9 +90,92 @@ export default function HomePage() {
     incrementViewCount();
   }, []);
 
+  const tecnologies = [
+    {
+      name: currentTexts.kafka,
+      image: kafka,
+    },
+    {
+      name: currentTexts.git,
+      image: git,
+    },
+    {
+      name: currentTexts.docker,
+      image: docker,
+    },
+    {
+      name: currentTexts.kubernetes,
+      image: kubernetes,
+    },
+    {
+      name: currentTexts.aws,
+      image: aws,
+    },
+
+    {
+      name: currentTexts.kotlin,
+      image: kotlin,
+    },
+    {
+      name: currentTexts.tailwind,
+      image: tailwind,
+    },
+    {
+      name: currentTexts.mongoDB,
+      image: mongoDB,
+    },
+    {
+      name: currentTexts.mysql,
+      image: mysql,
+    },
+    {
+      name: currentTexts.firebase,
+      image: firebase,
+    },
+    {
+      name: currentTexts.js,
+      image: js,
+    },
+    {
+      name: currentTexts.ts,
+      image: ts,
+    },
+    {
+      name: currentTexts.react,
+      image: react,
+    },
+    {
+      name: currentTexts.nextjs,
+      image: next,
+    },
+    {
+      name: currentTexts.angular,
+      image: angular,
+    },
+    {
+      name: currentTexts.nodejs,
+      image: nodejs,
+    },
+    {
+      name: currentTexts.python,
+      image: python,
+    },
+    {
+      name: currentTexts.java,
+      image: java,
+    },
+    {
+      name: currentTexts.spring,
+      image: spring,
+    },
+  ];
+
   return (
     <div className="w-full h-full bg-defaultBackground">
-      <div id="header" className="flex flex-col items-center justify-center">
+      <div
+        id="header"
+        className="flex flex-col items-center justify-center pt-16 sm:pt-0"
+      >
         {/* Animação da foto */}
         <motion.img
           src={myPhoto}
@@ -99,7 +189,7 @@ export default function HomePage() {
         />
         {/* Animação do título */}
         <motion.h3
-          className="p-0 m-0 text-xl text-white font-inconsolata"
+          className="p-0 m-0 text-center sm:text-xl text-white font-inconsolata px-10"
           initial="hidden"
           whileInView="visible"
           variants={fadeInVariants}
@@ -110,16 +200,33 @@ export default function HomePage() {
           {currentTexts.hello2}
         </motion.h3>
         <motion.h1
-          className="text-[3.8rem] text-white font-asap m-0 p-0 text-center"
+          className="text-[2rem] md:text-[3.5rem] lg:text-[3.8rem] text-white font-asap mt-5 md:mt-0 px-10 text-center"
           initial="hidden"
           whileInView="visible"
           variants={fadeInVariants}
           viewport={{ once: false }} // Permite refazer a animação ao voltar
         >
-          {currentTexts.jobTitle}
+          <span
+            className={`${
+              currentTexts.job[0] === "Full stack"
+                ? "text-[#13CD51] font-bold"
+                : " "
+            }`}
+          >
+            {currentTexts.job[0]}
+          </span>{" "}
+          <span
+            className={`${
+              currentTexts.job[1] === "Full stack"
+                ? "text-[#13CD51] font-bold"
+                : " "
+            }`}
+          >
+            {currentTexts.job[1]}
+          </span>{" "}
         </motion.h1>
         <motion.p
-          className="w-[800px] text-center text-white font-maven-pro text-md m-0 p-0"
+          className="max-w-[850px] text-justify md:text-center text-white font-maven-pro text-md mt-5 py-0 px-10 md:mt-0"
           initial="hidden"
           whileInView="visible"
           variants={fadeInVariants}
@@ -129,85 +236,7 @@ export default function HomePage() {
         </motion.p>
 
         {/* Animação para Habilities */}
-        <div className="flex flex-wrap justify-center gap-5 mt-10">
-          {[
-            {
-              icon: <FaGitAlt className="text-2xl text-[#F4511E]" />,
-              title: currentTexts.github,
-              url: "https://git-scm.com",
-            },
-            {
-              icon: <FaHtml5 className="text-[#E3646E] text-2xl" />,
-              title: currentTexts.html,
-              url: "https://developer.mozilla.org/pt-BR/docs/Web/HTML",
-            },
-            {
-              icon: <FaCss3 className="text-[#3996DB] text-2xl" />,
-              title: currentTexts.css,
-              url: "https://developer.mozilla.org/pt-BR/docs/Web/CSS",
-            },
-            {
-              icon: <IoLogoJavascript className="text-[#EABD5F] text-2xl" />,
-              title: currentTexts.javascript,
-              url: "https://developer.mozilla.org/pt-BR/docs/Web/JavaScript",
-            },
-            {
-              icon: <FaReact className="text-[#3996DB] text-2xl" />,
-              title: currentTexts.react,
-              url: "https://react.dev",
-            },
-            {
-              icon: <FaAngular className="text-[#A00F0F] text-2xl" />,
-              title: currentTexts.angular,
-              url: "https://angular.dev",
-            },
-          ].map((habilitie, index) => (
-            <motion.div
-              key={index}
-              initial="hidden"
-              whileInView="visible"
-              variants={fadeInVariants}
-              viewport={{ once: false }} // Permite refazer a animação ao voltar
-            >
-              <Habilitie {...habilitie} />
-            </motion.div>
-          ))}
-        </div>
-
-        <div className="flex flex-wrap justify-center gap-5 mt-5">
-          {[
-            {
-              icon: java,
-              title: currentTexts.java,
-              url: "https://www.java.com/pt-BR/",
-            },
-            {
-              icon: spring,
-              title: currentTexts.spring,
-              url: "https://spring.io",
-            },
-            {
-              icon: <GrMysql className="text-[#00758F] text-2xl" />,
-              title: currentTexts.mysql,
-              url: "https://www.mysql.com",
-            },
-            {
-              icon: <FaNodeJs className="text-[#82BC4F] text-2xl" />,
-              title: currentTexts.nodejs,
-              url: "https://nodejs.org/pt",
-            },
-          ].map((habilitie, index) => (
-            <motion.div
-              key={index}
-              initial="hidden"
-              whileInView="visible"
-              variants={fadeInVariants}
-              viewport={{ once: false }} // Permite refazer a animação ao voltar
-            >
-              <Habilitie {...habilitie} />
-            </motion.div>
-          ))}
-        </div>
+        <Slider tecnologies={tecnologies} />
 
         {/* Botão de Scroll */}
         <motion.div
@@ -234,7 +263,7 @@ export default function HomePage() {
       </div>
       <motion.div
         id="footer"
-        className="flex flex-col items-center justify-center pt-32 text-center"
+        className="flex flex-col items-center justify-center pt-32 text-center px-10"
       >
         <motion.h3
           initial="hidden"
@@ -250,7 +279,7 @@ export default function HomePage() {
           whileInView="visible"
           variants={fadeInVariants}
           viewport={{ once: false }}
-          className="my-2 text-3xl font-semibold text-white font-asap"
+          className="my-2 text-2xl sm:text-3xl font-semibold text-white font-asap"
         >
           {currentTexts.footerSubtitle}
         </motion.h2>
@@ -263,17 +292,17 @@ export default function HomePage() {
         >
           {currentTexts.footerDescription}
         </motion.p>
-        <div
+        <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false }}
-          className="flex flex-col items-center justify-center gap-5 mt-10"
+          className="flex flex-col items-center justify-center w-full max-w-2xl gap-4 mt-10 mx-auto" // Container principal com largura máxima
         >
           {[
             {
               icon: <PiLinkedinLogoBold className="text-[#13CD51] text-2xl" />,
               title: "Linkedin",
-              url: "https://aindaestaporvir.com",
+              url: "https://www.linkedin.com/in/pedro-henrique-panstein-7833bb316/",
             },
             {
               icon: <MdOutlineEmail className="text-[#13CD51] text-2xl" />,
@@ -304,11 +333,12 @@ export default function HomePage() {
                 ease: "easeOut",
               }}
               viewport={{ once: false }}
+              className="w-full"
             >
               <Contact {...contact} />
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </motion.div>
       <p className="text-center text-[#C0C4CE] font-maven-pro pb-5">
         &copy; {new Date().getFullYear()} Pedro Panstein

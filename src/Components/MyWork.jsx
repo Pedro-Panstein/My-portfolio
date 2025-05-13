@@ -102,7 +102,7 @@ export default function MyWork() {
       </motion.h2>
 
       {/* Projetos com animação */}
-      <div className="flex flex-wrap justify-center gap-10 mt-10 w-[1200px] mx-auto">
+      <div className="flex flex-wrap justify-center gap-10 mt-10 mx-auto">
         {projects.map((project, index) => (
           <motion.div
             key={project.id}

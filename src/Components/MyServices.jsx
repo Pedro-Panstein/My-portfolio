@@ -10,7 +10,7 @@ export default function MyServices() {
   const t = translations[language]; // Seleciona as traduções baseadas no idioma
 
   return (
-    <div className="bg-[#0D0E11] flex flex-col justify-center items-center mt-32 p-20">
+    <div className="bg-[#0D0E11] flex flex-col justify-center items-center mt-32 py-20 px-10">
       <motion.h3
         initial="hidden"
         whileInView="visible"
@@ -39,11 +39,11 @@ export default function MyServices() {
           },
         }}
         viewport={{ once: false }}
-        className="text-2xl text-white font-asap"
+        className="text-2xl text-white text-center font-asap"
       >
         {t.myServicesSubtitle}
       </motion.h2>
-      <div className="flex flex-wrap items-center justify-center gap-10 mt-10">
+      <div className="flex flex-wrap items-center p-0 justify-center gap-10 mt-10">
         {t.services.map((service, index) => (
           <motion.div
             key={index}
