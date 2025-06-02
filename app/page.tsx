@@ -225,7 +225,7 @@ export default function Home() {
         whileInView="visible"
         variants={fadeInVariants}
         viewport={{ once: false }}
-        className="min-h-[60vh] flex flex-col sm:flex-row justify-center items-center sm:gap-10 bg-neutral-900 text-white px-4 mb-32 sm:mb-0"
+        className="min-h-[60vh] flex flex-col sm:flex-row justify-center items-center sm:gap-10 text-white px-4 mb-32 sm:mb-0"
       >
         <YearExperience year={yearExperience} />
 
