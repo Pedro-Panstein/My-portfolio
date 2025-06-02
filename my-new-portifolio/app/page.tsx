@@ -14,25 +14,15 @@ import {
   Briefcase,
   GraduationCap,
   Users,
-  Clock,
   Coffee,
   Server,
   Zap,
-  BookOpen,
-  ArrowRight,
 } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import kafka from "@/assets/tecnologies/kafka.png";
 import git from "@/assets/tecnologies/git.png";
 import docker from "@/assets/tecnologies/docker.png";

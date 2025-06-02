@@ -12,8 +12,8 @@ html {
 
 #header {
   background-image: url("assets/background1.png");
-  min-height: 100dvh; /* Usa min-height em vez de height */
-  height: auto; /* Permite que cresça se necessário */
+  min-height: 100dvh;
+  height: auto;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
