@@ -10,7 +10,7 @@ import kubernetes from "@/assets/tecnologies/kubernetes.png";
 import aws from "@/assets/tecnologies/aws.png";
 import kotlin from "@/assets/tecnologies/kotlin.png";
 import tailwind from "@/assets/tecnologies/tailwind.png";
-import mongoDB from "@/assets/tecnologies/mongoDB.png";
+import mongoDB from "@/assets/tecnologies/mongodb.png";
 import mysql from "@/assets/tecnologies/mysql.png";
 import firebase from "@/assets/tecnologies/firebase.png";
 import js from "@/assets/tecnologies/javascript.png";
