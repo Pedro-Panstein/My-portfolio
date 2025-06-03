@@ -1118,48 +1118,10 @@ export default function CouncilPortal() {
             </div>
 
             <div className="backdrop-blur-sm bg-black/40 rounded-xl p-8 border border-emerald-500/20">
-              <h3 className="text-xl font-bold mb-6 text-emerald-500">
-                Equipe de Desenvolvimento
-              </h3>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div className="text-center">
-                  <h4 className="font-semibold text-emerald-400">
-                    Pedro Henrique Panstein
-                  </h4>
-                  <p className="text-gray-300 text-sm">
-                    Líder Técnico & Arquiteto
-                  </p>
-                </div>
-                <div className="text-center">
-                  <h4 className="font-semibold">Pedro Augusto Wilhelm</h4>
-                  <p className="text-gray-300 text-sm">
-                    Desenvolvedor Full Stack
-                  </p>
-                </div>
-                <div className="text-center">
-                  <h4 className="font-semibold">Mateus Henrique Bosquetti</h4>
-                  <p className="text-gray-300 text-sm">Desenvolvedor Backend</p>
-                </div>
-                <div className="text-center">
-                  <h4 className="font-semibold">Kauan Eggert</h4>
-                  <p className="text-gray-300 text-sm">
-                    Desenvolvedor Frontend
-                  </p>
-                </div>
-                <div className="text-center">
-                  <h4 className="font-semibold">Vinícius Eduardo dos Santos</h4>
-                  <p className="text-gray-300 text-sm">
-                    DevOps & Infraestrutura
-                  </p>
-                </div>
-              </div>
-
-              <div className="mt-8 pt-6 border-t border-emerald-500/20">
-                <p className="text-gray-300 text-sm">
-                  Projeto desenvolvido durante a aprendizagem CentroWeg -
-                  Parceria WEG e SENAI
-                </p>
-              </div>
+              <p className="text-gray-300 text-sm">
+                Projeto desenvolvido durante a aprendizagem CentroWeg - Parceria
+                WEG e SENAI
+              </p>
             </div>
           </div>
         </section>

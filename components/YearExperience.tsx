@@ -7,7 +7,7 @@ interface YearExperienceProps {
 export default function YearExperience({ year }: YearExperienceProps) {
   return (
     <svg
-      width="220"
+      width="250"
       height="300"
       viewBox="0 0 220 300"
       fill="none"
