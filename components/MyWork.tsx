@@ -43,7 +43,7 @@ export default function MyWork() {
       image: portalConselho,
       title: t.projects[0].title,
       description: t.projects[0].description,
-      url: "/portal-conselho",
+      url: "/projects/council-portal",
       tags: ["Next.js", "Java", "Phyton", "Kafka", "+12"],
     },
     {
@@ -51,7 +51,7 @@ export default function MyWork() {
       image: machineManagement,
       title: t.projects[1].title,
       description: t.projects[1].description,
-      url: "/machine-management",
+      url: "/projects/machine-management",
       tags: ["React", "Kafka", "Docker", "GraphQL", "+5"],
     },
     {
@@ -59,7 +59,7 @@ export default function MyWork() {
       image: plasmaDocs,
       title: t.projects[2].title,
       description: t.projects[2].description,
-      url: "/plasma-docs",
+      url: "/projects/plasma-docs",
       tags: ["Next.js", "Shadcn", "Tailwind CSS", "TypeScript"],
     },
     {
@@ -67,7 +67,7 @@ export default function MyWork() {
       image: ricadi,
       title: t.projects[3].title,
       description: t.projects[3].description,
-      url: "/ricadi",
+      url: "/projects/ricadi",
       tags: ["React", "Tailwind Css", "Firebase", "CI/CD", "+2"],
     },
     {
@@ -75,7 +75,7 @@ export default function MyWork() {
       image: crudUsers,
       title: t.projects[4].title,
       description: t.projects[4].description,
-      url: "crud-users",
+      url: "/projects/crud-users",
       tags: ["Angular", "Angular Material", "SCSS", "Firebase"],
     },
     {
@@ -83,7 +83,7 @@ export default function MyWork() {
       image: cashControlHub,
       title: t.projects[5].title,
       description: t.projects[5].description,
-      url: "/cash-control-hub",
+      url: "/projects/cash-control-hub",
       tags: ["Next.js", "Recharts", "Tailwind CSS", "TypeScript"],
     },
   ];

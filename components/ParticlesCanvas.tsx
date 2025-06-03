@@ -43,10 +43,10 @@ export default function ParticlesCanvas() {
       constructor() {
         this.x = Math.random() * window.innerWidth;
         this.y = Math.random() * window.innerHeight;
-        this.size = Math.random() * 1.5 + 0.5;
-        this.speedX = Math.random() * 0.4 - 0.2;
-        this.speedY = Math.random() * 0.4 - 0.2;
-        this.opacity = Math.random() * 0.2 + 0.1;
+        this.size = Math.random() * 3 + 2;
+        this.speedX = Math.random() * 0.5 - 0.25;
+        this.speedY = Math.random() * 0.5 - 0.25;
+        this.opacity = Math.random() * 0.3 + 0.2;
         this.color = `hsla(120, 80%, 60%, ${this.opacity})`;
       }
 
@@ -87,8 +87,8 @@ export default function ParticlesCanvas() {
           const distance = Math.sqrt(dx * dx + dy * dy);
 
           if (distance < maxDistance) {
-            const opacity = (1 - distance / maxDistance) * 0.1;
-            ctx.strokeStyle = `hsla(120, 60%, 50%, ${opacity})`;
+            
+            ctx.strokeStyle = `hsla(120, 60%, 50%, ${particles[a].opacity})`;
             ctx.lineWidth = 0.3;
             ctx.beginPath();
             ctx.moveTo(particles[a].x, particles[a].y);
@@ -132,8 +132,9 @@ export default function ParticlesCanvas() {
     <div className="fixed top-0 left-0 w-full h-full bg-defaultBackground z-0">
       <canvas
         ref={canvasRef}
-        className="w-full h-full pointer-events-none"
+        className="w-full h-full pointer-events-none opacity-30"
       />
     </div>
   );
 }
+

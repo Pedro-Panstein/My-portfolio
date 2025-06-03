@@ -37,7 +37,7 @@ export default function Home() {
   const [mounted, setMounted] = useState(false);
   const language = useLanguage();
   const currentTexts = translations[language as keyof typeof translations];
-  const aboutMeRef = useRef<HTMLDivElement>(null);
+  const yearExperienceRef = useRef<HTMLDivElement>(null);
   const [yearExperience, setYearExperience] = useState(0);
 
   useEffect(() => {
@@ -48,8 +48,8 @@ export default function Home() {
 
   if (!mounted) return null;
 
-  const scrollToAboutMe = () => {
-    aboutMeRef.current?.scrollIntoView({ behavior: "smooth" });
+  const scrollToYearExperience = () => {
+    yearExperienceRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
   const fadeInVariants = {
@@ -145,7 +145,7 @@ export default function Home() {
     <div className="w-full h-full">
       <div
         id="header"
-        className="flex flex-col items-center justify-center pt-16 sm:pt-0 z-10"
+        className="flex flex-col items-center relative justify-center pt-16 sm:pt-0 z-10"
       >
         <motion.img
           src="/myPhoto.png"
@@ -213,7 +213,7 @@ export default function Home() {
           }}
         >
           <div
-            onClick={scrollToAboutMe as any}
+            onClick={scrollToYearExperience as any}
             className="absolute text-4xl text-gray-600 transform -translate-x-1/2 cursor-pointer left-1/2 bottom-5"
           >
             <MdKeyboardDoubleArrowDown />
@@ -222,6 +222,7 @@ export default function Home() {
       </div>
       <motion.div
         initial="hidden"
+        ref={yearExperienceRef}
         whileInView="visible"
         variants={fadeInVariants}
         viewport={{ once: false }}
@@ -241,7 +242,7 @@ export default function Home() {
         <Slider tecnologies={tecnologies} />
       </div>
       {/* About me */}
-      <div className="z-20" ref={aboutMeRef}>
+      <div className="z-20">
         <AboutMe />
       </div>
 

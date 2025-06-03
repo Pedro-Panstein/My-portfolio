@@ -1,3 +1,5 @@
+import { title } from "process";
+
 export const translations = {
   pt: {
     hello: "Hello World! Meu nome é",
@@ -169,6 +171,145 @@ export const translations = {
           "Serviços contínuos de manutenção, atualizações e suporte técnico para garantir que suas aplicações funcionem perfeitamente a longo prazo.",
       },
     ],
+
+    //projects
+    projectsPages: {
+      "council-portal": {
+        navbar: "Voltar ao Portfólio",
+        hero: {
+          highligh: "Projeto Selecionado pelo SENAI",
+          title: "Portal do ",
+          title2: "Conselho",
+          description:
+            "Solução digital para Conselhos de Classe desenvolvida durante a aprendizagem CentroWeg (WEG + SENAI)",
+          calendar: "2 meses de desenvolvimento",
+          devs: "5 desenvolvedores",
+          winner: "Projeto vencedor",
+        },
+        summary: {
+          title: "Resumo ",
+          title2: "do Projeto",
+          challenge: {
+            title: "O Desafio",
+            description:
+              "O processo de Conselhos de Classe e liberação de feedbacks era realizado 100% presencialmente, causando atrasos de até dois meses na divulgação dos resultados aos alunos. Era necessário digitalizar e otimizar todo esse fluxo.",
+          },
+          solution: {
+            title: "A Solução",
+            description:
+              "Desenvolvemos uma plataforma web completa que digitaliza todo o processo, desde a organização dos conselhos até a distribuição de feedbacks, com comunicação em tempo real e dashboards para acompanhamento.",
+          },
+          team: {
+            title: "Equipe de Desenvolvimento",
+            me: "Eu",
+          },
+          months: "2 meses",
+          months2: "de desenvolvimento",
+          microservice: "6",
+          microservice2: "microserviços",
+          profileUsers: "5",
+          profileUsers2: "perfis de usuários",
+          winner: "1º",
+          winner2: "lugar entre 4 equipes",
+        },
+        Technologies: {
+          title: "Tecnologias ",
+          title2: "Utilizadas",
+          infra: "Infraestrutura",
+        },
+        architecture: {
+          title: "Arquitetura ",
+          title2: "e Infraestrutura",
+          microservice: {
+            title: "Microserviços",
+            description:
+              "A arquitetura foi projetada com 6 microserviços independentes, garantindo escalabilidade, manutenibilidade e isolamento de responsabilidades. Cada serviço possui sua própria base de dados e pode ser desenvolvido e implantado independentemente.",
+          },
+          kafka: {
+            title: "Apache Kafka",
+            description:
+              "Utilizamos o Kafka como barramento de eventos para garantir comunicação assíncrona, desacoplamento entre serviços, escalabilidade na troca de mensagens e resiliência do sistema. Essencial para notificações em tempo real e chat interno.",
+          },
+          decoupling: {
+            title: "Desacoplamento",
+            description:
+              "Serviços independentes que se comunicam via eventos, permitindo evolução isolada de cada componente.",
+          },
+          escalability: {
+            title: "Escalabilidade",
+            description:
+              "Cada microserviço pode ser escalado independentemente conforme a demanda específica.",
+          },
+          resiliency: {
+            title: "Resiliência",
+            description:
+              "Falhas em um serviço não comprometem o funcionamento dos demais componentes do sistema.",
+          },
+        },
+        userProfiles: {
+          title: "Funcionalidades",
+          title2: "por Perfil",
+          student: {
+            title: "Alunos",
+            description:
+              "Visualização de feedbacks e acompanhamento do desempenho acadêmico",
+            features: [
+              "Recebimento de feedbacks",
+              "Acompanhamento de desempenho",
+              "Histórico acadêmico",
+            ],
+          },
+          leader: {
+            title: "Representantes",
+            description:
+              "Funcionalidades de aluno + preenchimento do pré-conselho da turma",
+            features: [
+              "Todas as funções de aluno",
+              "Preenchimento do pré-conselho",
+              "Representação da turma",
+            ],
+          },
+          teacher: {
+            title: "Professores",
+            description:
+              "Registro de devolutivas e consulta de históricos dos alunos",
+            features: [
+              "Registro de devolutivas",
+              "Consulta de históricos",
+              "Acompanhamento de turmas",
+            ],
+          },
+          pedagogic: {
+            title: "Pedagogos",
+            description:
+              "Gestão completa dos conselhos e distribuição de feedbacks",
+            features: [
+              "Organização de conselhos",
+              "Gestão de turmas",
+              "Distribuição de feedbacks",
+              "Análise de indicadores",
+            ],
+          },
+          supervisors: {
+            title: "Supervisores",
+            description:
+              "Acesso a dashboards com dados consolidados e históricos",
+            features: [
+              "Dashboards executivos",
+              "Dados consolidados",
+              "Históricos de conselhos",
+              "Relatórios gerenciais",
+            ],
+          },
+          admin: {
+            title: "Administrador",
+            description:
+              "Somente uma conta, onde pode somente gerenciar turmas e usuários",
+            features: ["Gestão de turmas", "Gestão de usuários"],
+          },
+        },
+      },
+    },
 
     // Traduções do componente ContactMe
     footerTitle: "Contato",
@@ -344,6 +485,143 @@ export const translations = {
           "Ongoing maintenance, updates, and technical support services to ensure your applications work perfectly in the long run.",
       },
     ],
+
+    //projects
+    projectsPages: {
+      "council-portal": {
+        navbar: "Return to portfolio",
+        hero: {
+          highligh: "Projeto Selecionado pelo SENAI",
+          title: "Council ",
+          title2: "Portal",
+          description:
+            "Digital solution for Class Councils developed during the CentroWeg apprenticeship (WEG + SENAI)",
+          calendar: "2 months of development",
+          devs: "5 developers",
+          winner: "Winner Project",
+        },
+        summary: {
+          title: "Summary",
+          title2: "of the Project",
+          challenge: {
+            title: "The Challenge",
+            description:
+              "The process of Class Councils and feedback distribution was carried out 100% in person, causing delays of up to two months in sharing results with students. It was necessary to digitize and optimize the entire workflow.",
+          },
+          solution: {
+            title: "The Solution",
+            description:
+              "We developed a complete web platform that digitizes the entire process, from organizing the councils to distributing feedback, with real-time communication and dashboards for monitoring.",
+          },
+          team: {
+            title: "Development Team",
+            me: "Me",
+          },
+          months: "2 months",
+          months2: "of development",
+          microservice: "6",
+          microservice2: "microservices",
+          profileUsers: "5",
+          profileUsers2: "user profiles",
+          winner: "1st",
+          winner2: "place among 4 teams",
+        },
+        Technologies: {
+          title: "Technologies",
+          title2: "used",
+          infra: "Infrastructure",
+        },
+        architecture: {
+          title: "Architecture",
+          title2: "and Infrastructure",
+          microservice: {
+            title: "Microservices",
+            description:
+              "The architecture was designed with 6 independent microservices, ensuring scalability, maintainability, and responsibility isolation. Each service has its own database and can be developed and deployed independently.",
+          },
+          kafka: {
+            title: "Apache Kafka",
+            description:
+              "We use Kafka as an event bus to ensure asynchronous communication, decoupling between services, scalability in message exchange, and system resilience. Essential for real-time notifications and internal chat.",
+          },
+          decoupling: {
+            title: "Decoupling",
+            description:
+              "Independent services communicating via events, allowing isolated evolution of each component.",
+          },
+          escalability: {
+            title: "Scalability",
+            description:
+              "Each microservice can be scaled independently according to specific demand.",
+          },
+          resiliency: {
+            title: "Resilience",
+            description:
+              "Failures in one service do not compromise the operation of the other system components.",
+          },
+        },
+        userProfiles: {
+          title: "Features",
+          title2: "by Profile",
+          student: {
+            title: "Students",
+            description: "Viewing feedback and tracking academic performance",
+            features: [
+              "Receiving feedback",
+              "Performance tracking",
+              "Academic history",
+            ],
+          },
+          leader: {
+            title: "Class Representatives",
+            description:
+              "Student features + completion of the class pre-council",
+            features: [
+              "All student functions",
+              "Pre-council completion",
+              "Class representation",
+            ],
+          },
+          teacher: {
+            title: "Teachers",
+            description: "Recording feedback and consulting student history",
+            features: [
+              "Feedback recording",
+              "Student history consultation",
+              "Class monitoring",
+            ],
+          },
+          pedagogic: {
+            title: "Pedagogues",
+            description:
+              "Complete management of councils and feedback distribution",
+            features: [
+              "Council organization",
+              "Class management",
+              "Feedback distribution",
+              "Indicator analysis",
+            ],
+          },
+          supervisors: {
+            title: "Supervisors",
+            description:
+              "Access to dashboards with consolidated data and historical records",
+            features: [
+              "Executive dashboards",
+              "Consolidated data",
+              "Council history",
+              "Management reports",
+            ],
+          },
+          admin: {
+            title: "Administrator",
+            description:
+              "A single account that can only manage classes and users",
+            features: ["Class management", "User management"],
+          },
+        },
+      },
+    },
 
     // Traduções do componente ContactMe
     footerTitle: "Contact",

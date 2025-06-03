@@ -117,7 +117,7 @@ export default function MyServices() {
             },
             {
               title: t.services[5].title,
-              description: t.services[5].title,
+              description: t.services[5].description,
               icon: (
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -156,7 +156,7 @@ export default function MyServices() {
                 },
               }}
               viewport={{ once: false }}
-              className="group backdrop-blur-sm bg-black/40 rounded-xl p-8 border-[3px] border-emerald-500/40 hover:border-[#13CD51]/80 transition-all duration-300 hover:translate-y-[-5px]"
+              className="group backdrop-blur-sm bg-black/40 rounded-xl p-8 border-[3px] border-[#13CD51]/10 hover:border-[#13CD51]/80 transition-all duration-300 hover:translate-y-[-5px]"
             >
               <div
                 className={`mb-6 h-12 w-12 rounded-xl bg-gradient-to-br ${service.gradient} flex items-center justify-center`}
