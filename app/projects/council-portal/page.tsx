@@ -74,58 +74,30 @@ export default function CouncilPortal() {
 
   const timeline = [
     {
-      phase: "Descoberta",
-      title: "Reunião com Pedagógico",
-      description: "Levantamento de requisitos e entendimento do problema",
       icon: <Users className="h-5 w-5" />,
     },
     {
-      phase: "Planejamento",
-      title: "Análise de Requisitos",
-      description: "Definição de funcionalidades e arquitetura do sistema",
       icon: <Target className="h-5 w-5" />,
     },
     {
-      phase: "Prototipação",
-      title: "Wireframes no Figma",
-      description: "Criação de protótipos simples para validação inicial",
       icon: <Code className="h-5 w-5" />,
     },
     {
-      phase: "Design",
-      title: "Protótipo de Alta Fidelidade",
-      description: "Refinamento da interface após aprovação do pedagógico",
       icon: <Monitor className="h-5 w-5" />,
     },
     {
-      phase: "Frontend",
-      title: "Desenvolvimento da Interface",
-      description: "Implementação das telas e componentes em Next.js",
       icon: <Globe className="h-5 w-5" />,
     },
     {
-      phase: "Backend",
-      title: "APIs e Microserviços",
-      description: "Desenvolvimento dos 6 microserviços e integração com Kafka",
       icon: <Server className="h-5 w-5" />,
     },
     {
-      phase: "DevOps",
-      title: "Infraestrutura",
-      description: "Containerização com Docker e orquestração com Kubernetes",
       icon: <Cloud className="h-5 w-5" />,
     },
     {
-      phase: "Apresentação",
-      title: "Demo para Stakeholders",
-      description:
-        "Apresentação para 4 turmas de TI + professores + coordenação",
       icon: <Award className="h-5 w-5" />,
     },
     {
-      phase: "Aprovação",
-      title: "Seleção pelo SENAI",
-      description: "Projeto escolhido para implementação oficial",
       icon: <CheckCircle className="h-5 w-5" />,
     },
   ];
@@ -625,7 +597,10 @@ export default function CouncilPortal() {
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-2">
-              <span className="text-[#13CD51]">Chat</span> Interno
+              <span className="text-[#13CD51]">
+                {t.projectsPages["council-portal"].chat.title}
+              </span>{" "}
+              {t.projectsPages["council-portal"].chat.title2}
             </h2>
             <div className="h-1 w-20 bg-gradient-to-r from-[#13CD51] to-cyan-500 mx-auto mb-16 rounded-full"></div>
 
@@ -634,58 +609,38 @@ export default function CouncilPortal() {
                 <div className="flex items-center gap-3 mb-4">
                   <MessageSquare className="h-8 w-8 text-[#13CD51]" />
                   <h3 className="text-2xl font-bold">
-                    Comunicação em Tempo Real
+                    {t.projectsPages["council-portal"].chat.descriptions.title}
                   </h3>
                 </div>
 
                 <p className="text-gray-200 leading-relaxed">
-                  Sistema de chat integrado que permite comunicação direta entre
-                  pedagogos e demais usuários, garantindo centralização e foco
-                  pedagógico nas conversas.
+                  {
+                    t.projectsPages["council-portal"].chat.descriptions
+                      .description
+                  }
                 </p>
 
                 <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-[#13CD51] mt-0.5 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-semibold text-[#13CD51]">
-                        Pedagogos
-                      </h4>
-                      <p className="text-gray-300 text-sm">
-                        Podem iniciar conversas com qualquer usuário do sistema
-                      </p>
+                  {t.projectsPages[
+                    "council-portal"
+                  ].chat.descriptions.topics.map((row, index) => (
+                    <div className="flex items-start gap-3" key={index}>
+                      <CheckCircle className="h-5 w-5 text-[#13CD51] mt-0.5 flex-shrink-0" />
+                      <div>
+                        <h4 className="font-semibold text-[#13CD51]">
+                          {row.title}
+                        </h4>
+                        <p className="text-gray-300 text-sm">
+                          {row.description}
+                        </p>
+                      </div>
                     </div>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-[#13CD51] mt-0.5 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-semibold text-[#13CD51]">
-                        Demais Usuários
-                      </h4>
-                      <p className="text-gray-300 text-sm">
-                        Podem conversar apenas com pedagogos, garantindo
-                        centralização
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-[#13CD51] mt-0.5 flex-shrink-0" />
-                    <div>
-                      <h4 className="font-semibold text-[#13CD51]">
-                        Tempo Real
-                      </h4>
-                      <p className="text-gray-300 text-sm">
-                        Comunicação instantânea via Kafka + Event Source
-                      </p>
-                    </div>
-                  </div>
+                  ))}
                 </div>
               </div>
 
               <div className="relative">
-                <div className="absolute -inset-4 rounded-xl bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 opacity-75 blur-md"></div>
+                <div className="absolute -inset-4 rounded-xl bg-gradient-to-r from-[#13CD51]/20 to-cyan-600/20 opacity-75 blur-md"></div>
                 <div className="relative overflow-hidden rounded-xl border border-[#13CD51]/30">
                   <Image
                     src={councilChat}
@@ -704,13 +659,15 @@ export default function CouncilPortal() {
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-2">
-              <span className="text-emerald-500">Timeline</span> de
-              Desenvolvimento
+              <span className="text-[#13CD51]">
+                {t.projectsPages["council-portal"].timeline.title}
+              </span>{" "}
+              {t.projectsPages["council-portal"].timeline.title2}
             </h2>
-            <div className="h-1 w-20 bg-gradient-to-r from-emerald-500 to-cyan-500 mx-auto mb-16 rounded-full"></div>
+            <div className="h-1 w-20 bg-gradient-to-r from-[#13CD51] to-cyan-500 mx-auto mb-16 rounded-full"></div>
 
             <div className="relative">
-              <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 h-full w-0.5 bg-emerald-500/30"></div>
+              <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 h-full w-0.5 bg-[#13CD51]/30"></div>
 
               <div className="space-y-8">
                 {timeline.map((item, index) => (
@@ -720,8 +677,8 @@ export default function CouncilPortal() {
                       index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                     }`}
                   >
-                    <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-8 h-8 bg-black border-2 border-emerald-500 rounded-full flex items-center justify-center">
-                      <div className="text-emerald-500">{item.icon}</div>
+                    <div className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-8 h-8 bg-black border-2 border-[#13CD51] rounded-full flex items-center justify-center">
+                      <div className="text-[#13CD51]">{item.icon}</div>
                     </div>
 
                     <div
@@ -729,16 +686,28 @@ export default function CouncilPortal() {
                         index % 2 === 0 ? "md:pr-8" : "md:pl-8"
                       }`}
                     >
-                      <Card className="bg-black/40 backdrop-blur-sm border-emerald-500/20 hover:border-emerald-500/50 transition-all duration-300">
+                      <Card className="bg-black/40 backdrop-blur-sm border-[#13CD51]/20 hover:border-[#13CD51]/50 transition-all duration-300">
                         <CardContent className="p-6">
-                          <Badge className="mb-3 bg-emerald-500/20 text-emerald-400 border-emerald-500/30">
-                            {item.phase}
+                          <Badge className="mb-3 bg-[#13CD51]/20 text-[#13CD51] border-[#13CD51]/30">
+                            {
+                              t.projectsPages["council-portal"].timeline.line[
+                                index
+                              ].phase
+                            }
                           </Badge>
                           <h3 className="text-xl font-bold mb-2">
-                            {item.title}
+                            {
+                              t.projectsPages["council-portal"].timeline.line[
+                                index
+                              ].title
+                            }
                           </h3>
                           <p className="text-gray-200 text-sm">
-                            {item.description}
+                            {
+                              t.projectsPages["council-portal"].timeline.line[
+                                index
+                              ].description
+                            }
                           </p>
                         </CardContent>
                       </Card>
@@ -754,75 +723,102 @@ export default function CouncilPortal() {
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-2">
-              <span className="text-emerald-500">Interface</span> do Sistema
+              <span className="text-[#13CD51]">
+                {t.projectsPages["council-portal"].interface.title}
+              </span>{" "}
+              {t.projectsPages["council-portal"].interface.title2}
             </h2>
-            <div className="h-1 w-20 bg-gradient-to-r from-emerald-500 to-cyan-500 mx-auto mb-16 rounded-full"></div>
+            <div className="h-1 w-20 bg-gradient-to-r from-[#13CD51] to-cyan-500 mx-auto mb-16 rounded-full"></div>
 
             <div className="grid md:grid-cols-2 gap-8">
               <div className="space-y-6">
                 <div className="relative group">
-                  <div className="absolute -inset-2 rounded-xl bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 opacity-0 group-hover:opacity-100 blur transition-all duration-300"></div>
-                  <div className="relative overflow-hidden rounded-xl border border-emerald-500/30">
+                  <div className="absolute -inset-2 rounded-xl bg-gradient-to-r from-[#13CD51]/20 to-cyan-600/20 opacity-0 group-hover:opacity-100 blur transition-all duration-300"></div>
+                  <div className="relative overflow-hidden rounded-xl border border-[#13CD51]/30">
                     <Image
                       src="/placeholder.svg?height=300&width=500"
-                      alt="Dashboard Principal"
+                      alt={
+                        t.projectsPages["council-portal"].interface.subTitles[0]
+                          .text
+                      }
                       width={500}
                       height={300}
                       className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>
                   <p className="text-center text-gray-300 text-sm mt-2">
-                    Dashboard Principal
+                    {
+                      t.projectsPages["council-portal"].interface.subTitles[0]
+                        .text
+                    }
                   </p>
                 </div>
 
                 <div className="relative group">
-                  <div className="absolute -inset-2 rounded-xl bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 opacity-0 group-hover:opacity-100 blur transition-all duration-300"></div>
-                  <div className="relative overflow-hidden rounded-xl border border-emerald-500/30">
+                  <div className="absolute -inset-2 rounded-xl bg-gradient-to-r from-[#13CD51]/20 to-cyan-600/20 opacity-0 group-hover:opacity-100 blur transition-all duration-300"></div>
+                  <div className="relative overflow-hidden rounded-xl border border-[#13CD51]/30">
                     <Image
                       src="/placeholder.svg?height=300&width=500"
-                      alt="Gestão de Conselhos"
+                      alt={
+                        t.projectsPages["council-portal"].interface.subTitles[2]
+                          .text
+                      }
                       width={500}
                       height={300}
                       className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>
                   <p className="text-center text-gray-300 text-sm mt-2">
-                    Gestão de Conselhos
+                    {
+                      t.projectsPages["council-portal"].interface.subTitles[2]
+                        .text
+                    }
                   </p>
                 </div>
               </div>
 
               <div className="space-y-6">
                 <div className="relative group">
-                  <div className="absolute -inset-2 rounded-xl bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 opacity-0 group-hover:opacity-100 blur transition-all duration-300"></div>
-                  <div className="relative overflow-hidden rounded-xl border border-emerald-500/30">
+                  <div className="absolute -inset-2 rounded-xl bg-gradient-to-r from-[#13CD51]/20 to-cyan-600/20 opacity-0 group-hover:opacity-100 blur transition-all duration-300"></div>
+                  <div className="relative overflow-hidden rounded-xl border border-[#13CD51]/30">
                     <Image
                       src="/placeholder.svg?height=300&width=500"
-                      alt="Feedbacks dos Alunos"
+                      alt={
+                        t.projectsPages["council-portal"].interface.subTitles[1]
+                          .text
+                      }
                       width={500}
                       height={300}
                       className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>
                   <p className="text-center text-gray-300 text-sm mt-2">
-                    Feedbacks dos Alunos
+                    {
+                      t.projectsPages["council-portal"].interface.subTitles[1]
+                        .text
+                    }
                   </p>
                 </div>
 
                 <div className="relative group">
-                  <div className="absolute -inset-2 rounded-xl bg-gradient-to-r from-emerald-600/20 to-cyan-600/20 opacity-0 group-hover:opacity-100 blur transition-all duration-300"></div>
-                  <div className="relative overflow-hidden rounded-xl border border-emerald-500/30">
+                  <div className="absolute -inset-2 rounded-xl bg-gradient-to-r from-[#13CD51]/20 to-cyan-600/20 opacity-0 group-hover:opacity-100 blur transition-all duration-300"></div>
+                  <div className="relative overflow-hidden rounded-xl border border-[#13CD51]/30">
                     <Image
                       src="/placeholder.svg?height=300&width=500"
-                      alt="Relatórios e Analytics"
+                      alt={
+                        t.projectsPages["council-portal"].interface.subTitles[3]
+                          .text
+                      }
                       width={500}
                       height={300}
                       className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>
                   <p className="text-center text-gray-300 text-sm mt-2">
-                    Relatórios e Analytics
+                    {
+                      t.projectsPages["council-portal"].interface.subTitles[3]
+                        .text
+                    }
                   </p>
                 </div>
               </div>
@@ -831,12 +827,16 @@ export default function CouncilPortal() {
             <div className="mt-12 text-center">
               <div className="flex justify-center gap-8 mb-6">
                 <div className="flex items-center gap-2">
-                  <Monitor className="h-5 w-5 text-emerald-500" />
-                  <span className="text-gray-300">Interface Desktop</span>
+                  <Monitor className="h-5 w-5 text-[#13CD51]" />
+                  <span className="text-gray-300">
+                    {t.projectsPages["council-portal"].interface.desktop}
+                  </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Smartphone className="h-5 w-5 text-emerald-500" />
-                  <span className="text-gray-300">Responsivo Mobile</span>
+                  <Smartphone className="h-5 w-5 text-[#13CD51]" />
+                  <span className="text-gray-300">
+                    {t.projectsPages["council-portal"].interface.mobile}
+                  </span>
                 </div>
               </div>
             </div>
@@ -847,79 +847,78 @@ export default function CouncilPortal() {
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-2">
-              <span className="text-emerald-500">Resultados</span> e
-              Reconhecimento
+              <span className="text-[#13CD51]">
+                {t.projectsPages["council-portal"].results.title}
+              </span>{" "}
+              {t.projectsPages["council-portal"].results.title2}
             </h2>
-            <div className="h-1 w-20 bg-gradient-to-r from-emerald-500 to-cyan-500 mx-auto mb-16 rounded-full"></div>
+            <div className="h-1 w-20 bg-gradient-to-r from-[#13CD51] to-cyan-500 mx-auto mb-16 rounded-full"></div>
 
             <div className="grid md:grid-cols-3 gap-8 mb-12">
-              <Card className="bg-black/40 backdrop-blur-sm border-emerald-500/20 text-center">
+              <Card className="bg-black/40 backdrop-blur-sm border-[#13CD51]/20 text-center">
                 <CardContent className="p-8">
-                  <Award className="h-12 w-12 text-emerald-500 mx-auto mb-4" />
+                  <Award className="h-12 w-12 text-[#13CD51] mx-auto mb-4" />
                   <h3 className="text-xl font-bold mb-2">
-                    Projeto Selecionado
+                    {t.projectsPages["council-portal"].results.results[0].title}
                   </h3>
                   <p className="text-gray-200 text-sm">
-                    Escolhido pelo SENAI entre 4 equipes participantes para
-                    implementação oficial
+                    {t.projectsPages["council-portal"].results.results[0].description}
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="bg-black/40 backdrop-blur-sm border-emerald-500/20 text-center">
+              <Card className="bg-black/40 backdrop-blur-sm border-[#13CD51]/20 text-center">
                 <CardContent className="p-8">
-                  <Zap className="h-12 w-12 text-emerald-500 mx-auto mb-4" />
-                  <h3 className="text-xl font-bold mb-2">Redução de Prazo</h3>
+                  <Zap className="h-12 w-12 text-[#13CD51] mx-auto mb-4" />
+                  <h3 className="text-xl font-bold mb-2">{t.projectsPages["council-portal"].results.results[1].title}</h3>
                   <p className="text-gray-200 text-sm">
-                    De 2 meses para liberação instantânea de feedbacks aos
-                    alunos
+                    {t.projectsPages["council-portal"].results.results[1].description}
                   </p>
                 </CardContent>
               </Card>
 
-              <Card className="bg-black/40 backdrop-blur-sm border-emerald-500/20 text-center">
+              <Card className="bg-black/40 backdrop-blur-sm border-[#13CD51]/20 text-center">
                 <CardContent className="p-8">
-                  <BarChart3 className="h-12 w-12 text-emerald-500 mx-auto mb-4" />
-                  <h3 className="text-xl font-bold mb-2">Padronização</h3>
+                  <BarChart3 className="h-12 w-12 text-[#13CD51] mx-auto mb-4" />
+                  <h3 className="text-xl font-bold mb-2">{t.projectsPages["council-portal"].results.results[2].title}</h3>
                   <p className="text-gray-200 text-sm">
-                    Processo unificado e padronizado para todos os conselhos de
-                    classe
+                    {t.projectsPages["council-portal"].results.results[2].description}
                   </p>
                 </CardContent>
               </Card>
             </div>
 
-            <div className="backdrop-blur-sm bg-black/40 rounded-xl p-8 border border-emerald-500/20">
-              <h3 className="text-2xl font-bold mb-6 text-center text-emerald-500">
-                Critérios de Avaliação
+            <div className="backdrop-blur-sm bg-black/40 rounded-xl p-8 border border-[#13CD51]/20">
+              <h3 className="text-2xl font-bold mb-6 text-center text-[#13CD51]">
+                {t.projectsPages["council-portal"].results.title3}
               </h3>
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div className="text-center">
-                  <CheckCircle className="h-8 w-8 text-emerald-500 mx-auto mb-3" />
-                  <h4 className="font-semibold mb-2">Viabilidade Técnica</h4>
+                  <CheckCircle className="h-8 w-8 text-[#13CD51] mx-auto mb-3" />
+                  <h4 className="font-semibold mb-2">{t.projectsPages["council-portal"].results.criterias[0].title}</h4>
                   <p className="text-gray-300 text-sm">
-                    Arquitetura sólida e tecnologias adequadas
+                    {t.projectsPages["council-portal"].results.criterias[0].description}
                   </p>
                 </div>
                 <div className="text-center">
-                  <CheckCircle className="h-8 w-8 text-emerald-500 mx-auto mb-3" />
-                  <h4 className="font-semibold mb-2">Usabilidade</h4>
+                  <CheckCircle className="h-8 w-8 text-[#13CD51] mx-auto mb-3" />
+                  <h4 className="font-semibold mb-2">{t.projectsPages["council-portal"].results.criterias[1].title}</h4>
                   <p className="text-gray-300 text-sm">
-                    Interface intuitiva e experiência do usuário
+                    {t.projectsPages["council-portal"].results.criterias[1].description}
                   </p>
                 </div>
                 <div className="text-center">
-                  <CheckCircle className="h-8 w-8 text-emerald-500 mx-auto mb-3" />
-                  <h4 className="font-semibold mb-2">Impacto Institucional</h4>
+                  <CheckCircle className="h-8 w-8 text-[#13CD51] mx-auto mb-3" />
+                  <h4 className="font-semibold mb-2">{t.projectsPages["council-portal"].results.criterias[2].title}</h4>
                   <p className="text-gray-300 text-sm">
-                    Benefícios diretos para a instituição
+                    {t.projectsPages["council-portal"].results.criterias[2].description}
                   </p>
                 </div>
                 <div className="text-center">
-                  <CheckCircle className="h-8 w-8 text-emerald-500 mx-auto mb-3" />
-                  <h4 className="font-semibold mb-2">Escalabilidade</h4>
+                  <CheckCircle className="h-8 w-8 text-[#13CD51] mx-auto mb-3" />
+                  <h4 className="font-semibold mb-2">{t.projectsPages["council-portal"].results.criterias[3].title}</h4>
                   <p className="text-gray-300 text-sm">
-                    Capacidade de crescimento e adaptação
+                    {t.projectsPages["council-portal"].results.criterias[3].description}
                   </p>
                 </div>
               </div>
@@ -931,66 +930,66 @@ export default function CouncilPortal() {
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-2">
-              <span className="text-emerald-500">Aprendizados</span> e Conclusão
+              <span className="text-[#13CD51]">Aprendizados</span> e Conclusão
             </h2>
-            <div className="h-1 w-20 bg-gradient-to-r from-emerald-500 to-cyan-500 mx-auto mb-16 rounded-full"></div>
+            <div className="h-1 w-20 bg-gradient-to-r from-[#13CD51] to-cyan-500 mx-auto mb-16 rounded-full"></div>
 
             <div className="grid md:grid-cols-2 gap-12">
               <div className="space-y-6">
-                <h3 className="text-2xl font-bold text-emerald-500">
+                <h3 className="text-2xl font-bold text-[#13CD51]">
                   Desafios Enfrentados
                 </h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-emerald-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-[#13CD51] mt-0.5 flex-shrink-0" />
                     <span className="text-gray-200">
                       Prazo apertado de apenas 2 meses para entrega completa
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-emerald-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-[#13CD51] mt-0.5 flex-shrink-0" />
                     <span className="text-gray-200">
                       Complexidade da arquitetura em microserviços
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-emerald-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-[#13CD51] mt-0.5 flex-shrink-0" />
                     <span className="text-gray-200">
                       Integração de múltiplas tecnologias e serviços
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-emerald-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-[#13CD51] mt-0.5 flex-shrink-0" />
                     <span className="text-gray-200">
                       Coordenação de equipe multidisciplinar
                     </span>
                   </li>
                 </ul>
 
-                <h3 className="text-2xl font-bold text-emerald-500">
+                <h3 className="text-2xl font-bold text-[#13CD51]">
                   Tecnologias Dominadas
                 </h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-emerald-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-[#13CD51] mt-0.5 flex-shrink-0" />
                     <span className="text-gray-200">
                       Apache Kafka para mensageria e eventos
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-emerald-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-[#13CD51] mt-0.5 flex-shrink-0" />
                     <span className="text-gray-200">
                       Kubernetes para orquestração de containers
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-emerald-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-[#13CD51] mt-0.5 flex-shrink-0" />
                     <span className="text-gray-200">
                       Arquitetura de microserviços na prática
                     </span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-emerald-500 mt-0.5 flex-shrink-0" />
+                    <CheckCircle className="h-5 w-5 text-[#13CD51] mt-0.5 flex-shrink-0" />
                     <span className="text-gray-200">
                       Integração de serviços AWS
                     </span>
@@ -999,7 +998,7 @@ export default function CouncilPortal() {
               </div>
 
               <div className="space-y-6">
-                <h3 className="text-2xl font-bold text-emerald-500">
+                <h3 className="text-2xl font-bold text-[#13CD51]">
                   Crescimento Pessoal
                 </h3>
                 <p className="text-gray-200 leading-relaxed">
@@ -1010,7 +1009,7 @@ export default function CouncilPortal() {
                   de centenas de alunos foi extremamente enriquecedora.
                 </p>
 
-                <h3 className="text-2xl font-bold text-emerald-500">
+                <h3 className="text-2xl font-bold text-[#13CD51]">
                   Reflexões Futuras
                 </h3>
                 <p className="text-gray-200 leading-relaxed">
@@ -1023,8 +1022,8 @@ export default function CouncilPortal() {
                   para insights pedagógicos.
                 </p>
 
-                <div className="backdrop-blur-sm bg-emerald-500/10 rounded-xl p-6 border border-emerald-500/30">
-                  <p className="text-emerald-200 italic text-center">
+                <div className="backdrop-blur-sm bg-[#13CD51]/10 rounded-xl p-6 border border-[#13CD51]/30">
+                  <p className="text-[#8fffb4] italic text-center">
                     "Este projeto vai além da tecnologia — representa uma
                     transformação concreta na forma como desenvolvemos soluções
                     educacionais."
@@ -1085,13 +1084,13 @@ export default function CouncilPortal() {
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-8">
-              <span className="text-emerald-500">Links</span> e Créditos
+              <span className="text-[#13CD51]">Links</span> e Créditos
             </h2>
 
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               <Button
                 asChild
-                className="bg-gradient-to-r from-emerald-500 to-cyan-500 hover:from-emerald-600 hover:to-cyan-600 text-black font-medium"
+                className="bg-gradient-to-r from-[#13CD51] to-cyan-500 hover:from-[#13CD51] hover:to-cyan-600 text-black font-medium"
               >
                 <Link
                   href="https://github.com/pedropanstein/portal-do-conselho"
@@ -1105,7 +1104,7 @@ export default function CouncilPortal() {
               <Button
                 asChild
                 variant="outline"
-                className="border-emerald-500 text-emerald-500 hover:bg-emerald-500/10"
+                className="border-[#13CD51] text-[#13CD51] hover:bg-[#13CD51]/10"
               >
                 <Link
                   href="https://linkedin.com/in/pedropanstein"
@@ -1117,7 +1116,7 @@ export default function CouncilPortal() {
               </Button>
             </div>
 
-            <div className="backdrop-blur-sm bg-black/40 rounded-xl p-8 border border-emerald-500/20">
+            <div className="backdrop-blur-sm bg-black/40 rounded-xl p-8 border border-[#13CD51]/20">
               <p className="text-gray-300 text-sm">
                 Projeto desenvolvido durante a aprendizagem CentroWeg - Parceria
                 WEG e SENAI
@@ -1127,7 +1126,7 @@ export default function CouncilPortal() {
         </section>
 
         {/* Footer */}
-        <footer className="py-8 px-4 border-t border-emerald-500/20">
+        <footer className="py-8 px-4 border-t border-[#13CD51]/20">
           <div className="max-w-6xl mx-auto text-center">
             <p className="text-gray-500 text-sm">
               © {new Date().getFullYear()} Pedro Panstein. Portal do Conselho -

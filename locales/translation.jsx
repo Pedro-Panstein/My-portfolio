@@ -1,5 +1,3 @@
-import { title } from "process";
-
 export const translations = {
   pt: {
     hello: "Hello World! Meu nome é",
@@ -307,6 +305,154 @@ export const translations = {
               "Somente uma conta, onde pode somente gerenciar turmas e usuários",
             features: ["Gestão de turmas", "Gestão de usuários"],
           },
+        },
+        chat: {
+          title: "Chat",
+          title2: "Interno",
+          descriptions: {
+            title: "Comunicação em Tempo Real",
+            description:
+              "Sistema de chat integrado que permite comunicação direta entre pedagogos e demais usuários, garantindo centralização e foco pedagógico nas conversas.",
+            topics: [
+              {
+                title: "Pedagogos",
+                description:
+                  "Podem iniciar conversas com qualquer usuário do sistema",
+              },
+              {
+                title: "Demais Usuários",
+                description:
+                  "Podem conversar apenas com pedagogos, garantindo centralização",
+              },
+              {
+                title: "Tempo Real",
+                description: "Comunicação instantânea via Kafka + Event Source",
+              },
+            ],
+          },
+        },
+        timeline: {
+          title: "Timeline",
+          title2: "de Desenvolvimento",
+          line: [
+            {
+              phase: "Descoberta",
+              title: "Reunião com Pedagógico",
+              description:
+                "Levantamento de requisitos e entendimento do problema",
+            },
+            {
+              phase: "Planejamento",
+              title: "Análise de Requisitos",
+              description:
+                "Definição de funcionalidades e arquitetura do sistema",
+            },
+            {
+              phase: "Prototipação",
+              title: "Wireframes no Figma",
+              description:
+                "Criação de protótipos simples para validação inicial",
+            },
+            {
+              phase: "Design",
+              title: "Protótipo de Alta Fidelidade",
+              description:
+                "Refinamento da interface após aprovação do pedagógico",
+            },
+            {
+              phase: "Frontend",
+              title: "Desenvolvimento da Interface",
+              description: "Implementação das telas e componentes em Next.js",
+            },
+            {
+              phase: "Backend",
+              title: "APIs e Microserviços",
+              description:
+                "Desenvolvimento dos 6 microserviços e integração com Kafka",
+            },
+            {
+              phase: "DevOps",
+              title: "Infraestrutura",
+              description:
+                "Containerização com Docker e orquestração com Kubernetes",
+            },
+            {
+              phase: "Apresentação",
+              title: "Demo para Stakeholders",
+              description:
+                "Apresentação para 4 turmas de TI + professores + coordenação",
+            },
+            {
+              phase: "Aprovação",
+              title: "Seleção pelo SENAI",
+              description: "Projeto escolhido para implementação oficial",
+            },
+          ],
+        },
+        interface: {
+          title: "Interface",
+          title2: "do Sistema",
+          subTitles: [
+            {
+              text: "Dashboard Principal",
+            },
+            {
+              text: "Feedbacks dos Alunos",
+            },
+            {
+              text: "Gestão de Conselhos",
+            },
+            {
+              text: "Relatórios e Analytics",
+            },
+          ],
+          desktop: "Interface Desktop",
+          mobile: "Responsivo Mobile",
+        },
+        results: {
+          title: "Resultados",
+          title2: "e Reconhecimento",
+          results: [
+            {
+              title: "Projeto Selecionado",
+              description:
+                "Escolhido pelo SENAI entre 4 equipes participantes para implementação oficial",
+            },
+            {
+              title: "Redução de Prazo",
+              description:
+                "De 2 meses para liberação instantânea de feedbacks aos alunos",
+            },
+            {
+              title: "Padronização",
+              description:
+                "Processo unificado e padronizado para todos os conselhos de classe",
+            },
+          ],
+          title3: "Critérios de Avaliação",
+          criterias: [
+            {
+              title: "Viabilidade Técnica",
+              description: "Arquitetura sólida e tecnologias adequadas",
+            },
+            {
+              title: "Usabilidade",
+              description: "Interface intuitiva e experiência do usuário",
+            },
+            {
+              title: "Impacto Institucional",
+              description: "Benefícios diretos para a instituição",
+            },
+
+            {
+              title: "Escalabilidade",
+              description: "Capacidade de crescimento e adaptação",
+            },
+          ],
+        },
+        learning: {
+          title: "Aprendizados",
+          title2: "e Conclusão",
         },
       },
     },
@@ -619,6 +765,150 @@ export const translations = {
               "A single account that can only manage classes and users",
             features: ["Class management", "User management"],
           },
+        },
+        chat: {
+          title: "Chat",
+          title2: "Internal",
+          descriptions: {
+            title: "Real-Time Communication",
+            description:
+              "Integrated chat system that allows direct communication between educators and other users, ensuring centralization and pedagogical focus in conversations.",
+            topics: [
+              {
+                title: "Educators",
+                description:
+                  "Can initiate conversations with any user in the system",
+              },
+              {
+                title: "Other Users",
+                description:
+                  "Can only communicate with educators, ensuring centralization",
+              },
+              {
+                title: "Real-Time",
+                description: "Instant communication via Kafka + Event Source",
+              },
+            ],
+          },
+        },
+        timeline: {
+          title: "Timeline",
+          title2: "Development",
+          line: [
+            {
+              phase: "Discovery",
+              title: "Meeting with Pedagogical Team",
+              description: "Requirement gathering and problem understanding",
+            },
+            {
+              phase: "Planning",
+              title: "Requirement Analysis",
+              description:
+                "Definition of system functionalities and architecture",
+            },
+            {
+              phase: "Prototyping",
+              title: "Wireframes in Figma",
+              description:
+                "Creation of simple prototypes for initial validation",
+            },
+            {
+              phase: "Design",
+              title: "High-Fidelity Prototype",
+              description:
+                "Interface refinement after pedagogical team approval",
+            },
+            {
+              phase: "Frontend",
+              title: "Interface Development",
+              description:
+                "Implementation of screens and components in Next.js",
+            },
+            {
+              phase: "Backend",
+              title: "APIs and Microservices",
+              description:
+                "Development of 6 microservices and integration with Kafka",
+            },
+            {
+              phase: "DevOps",
+              title: "Infrastructure",
+              description:
+                "Containerization with Docker and orchestration with Kubernetes",
+            },
+            {
+              phase: "Presentation",
+              title: "Demo for Stakeholders",
+              description:
+                "Presentation to 4 IT classes + teachers + coordination",
+            },
+            {
+              phase: "Approval",
+              title: "Selection by SENAI",
+              description: "Project chosen for official implementation",
+            },
+          ],
+        },
+        interface: {
+          title: "Interface",
+          title2: "System",
+          subTitles: [
+            {
+              text: "Main Dashboard",
+            },
+            {
+              text: "Student Feedback",
+            },
+            {
+              text: "Council Management",
+            },
+            {
+              text: "Reports & Analytics",
+            },
+          ],
+          desktop: "Desktop Interface",
+          mobile: "Mobile Responsive",
+        },
+        results: {
+          title: "Results",
+          title2: "and Recognition",
+          results: [
+            {
+              title: "Selected Project",
+              description:
+                "Chosen by SENAI among 4 participating teams for official implementation",
+            },
+            {
+              title: "Deadline Reduction",
+              description:
+                "From 2 months to instant feedback release for students",
+            },
+            {
+              title: "Standardization",
+              description:
+                "Unified and standardized process for all class councils",
+            },
+          ],
+          title3: "Evaluation Criteria",
+          criterias: [
+            {
+              title: "Technical Feasibility",
+              description: "Solid architecture and appropriate technologies",
+            },
+            {
+              title: "Usability",
+              description: "Intuitive interface and user experience",
+            },
+            {
+              title: "Institutional Impact",
+              description: "Direct benefits for the institution",
+            },
+
+            {
+              title: "Scalability",
+              description: "Growth and adaptation capability",
+            },
+          ],
         },
       },
     },
