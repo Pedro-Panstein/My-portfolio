@@ -3,6 +3,7 @@ import { Inter, Inconsolata, Asap, Maven_Pro } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import ParticlesCanvas from "@/components/ParticlesCanvas";
+import { LanguageProvider } from "@/context/LanguageContext";
 
 const inter = Inter({ subsets: ["latin"] });
 const inconsolata = Inconsolata({ subsets: ["latin"] });
@@ -21,6 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR" suppressHydrationWarning>
+       <LanguageProvider>
       <body
         className={`${inter.className} ${inconsolata.className} ${asap.className} ${mavenPro.className} overflow-x-hidden`}
       >
@@ -36,6 +38,7 @@ export default function RootLayout({
           </div>
         </ThemeProvider>
       </body>
+      </LanguageProvider>
     </html>
   );
 }

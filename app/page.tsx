@@ -35,15 +35,22 @@ import MyExperience from "@/components/MyExperience";
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);
-  const language = useLanguage();
-  const currentTexts = translations[language as keyof typeof translations];
   const yearExperienceRef = useRef<HTMLDivElement>(null);
   const [yearExperience, setYearExperience] = useState(0);
+  const [isBrazil, setIsBrazil] = useState(false);
+  const { language, toggleLanguage } = useLanguage();
+  const currentTexts = translations[language as keyof typeof translations];
 
   useEffect(() => {
     setMounted(true);
     const actualDate = new Date().getFullYear();
     setYearExperience(actualDate - 2021);
+  }, []);
+
+  useEffect(() => {
+    const actualDate = new Date().getFullYear();
+    setYearExperience(actualDate - 2021);
+    setMounted(true);
   }, []);
 
   if (!mounted) return null;
@@ -148,14 +155,15 @@ export default function Home() {
         className="flex flex-col items-center relative justify-center pt-16 sm:pt-0 z-10"
       >
         <motion.img
-          src="/myPhoto.png"
+          src={`/profile ${language === "pt" ? "br" : "eua"}.png`}
           alt="profile photo"
-          className="p-0 mb-10 select-none"
+          className="p-0 mb-10 select-none cursor-pointer"
           draggable="false"
           initial="hidden"
           whileInView="visible"
           variants={fadeInVariants}
           viewport={{ once: false }}
+          onClick={toggleLanguage}
         />
         <motion.h3
           className="p-0 m-0 text-center sm:text-xl text-white font-inconsolata px-10"
@@ -220,6 +228,9 @@ export default function Home() {
           </div>
         </motion.div>
       </div>
+      <div>
+        <Slider tecnologies={tecnologies} />
+      </div>
       <motion.div
         initial="hidden"
         ref={yearExperienceRef}
@@ -237,10 +248,6 @@ export default function Home() {
           </p>
         </div>
       </motion.div>
-
-      <div>
-        <Slider tecnologies={tecnologies} />
-      </div>
       {/* About me */}
       <div className="z-20">
         <AboutMe />

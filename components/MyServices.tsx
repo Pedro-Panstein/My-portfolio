@@ -4,7 +4,7 @@ import { translations } from "@/locales/translation";
 import { Server, Zap } from "lucide-react";
 
 export default function MyServices() {
-  const language = useLanguage();
+  const { language, toggleLanguage } = useLanguage();
   const t = translations[language as keyof typeof translations];
 
   const fadeInVariants = {

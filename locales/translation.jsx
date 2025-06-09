@@ -453,6 +453,60 @@ export const translations = {
         learning: {
           title: "Aprendizados",
           title2: "e Conclusão",
+          learnings: [
+            {
+              title: "Desafios Enfrentados",
+              bullets: [
+                {
+                  text: "Prazo apertado de apenas 2 meses para entrega completa",
+                },
+                {
+                  text: "Complexidade da arquitetura em microserviços",
+                },
+                {
+                  text: "Integração de múltiplas tecnologias e serviços",
+                },
+                {
+                  text: "Coordenação de equipe multidisciplinar",
+                },
+              ],
+            },
+            {
+              title: "Tecnologias Dominadas",
+              bullets: [
+                { text: "Apache Kafka para mensageria e eventos" },
+                { text: "Kubernetes para orquestração de containers" },
+                { text: "Arquitetura de microserviços na prática" },
+                { text: "Integração de serviços AWS" },
+              ],
+            },
+          ],
+          others: [
+            {
+              title: "Crescimento Pessoal",
+              text: "Este projeto representou uma transformação significativa na minha forma de desenvolver soluções. A experiência de liderar uma equipe técnica, tomar decisões arquiteturais complexas e entregar uma solução que impacta diretamente a vida acadêmica de centenas de alunos foi extremamente enriquecedora.",
+            },
+            {
+              title: "Reflexões Futuras",
+              text: "Apesar da complexidade técnica e do prazo desafiador, conseguimos entregar uma solução completa, funcional e escalável. É interessante imaginar o que seria possível com mais tempo e investimento - certamente poderíamos explorar ainda mais funcionalidades avançadas como machine learning para análise preditiva de desempenho e inteligência artificial para insights pedagógicos.",
+            },
+          ],
+          phrase:
+            "Este projeto vai além da tecnologia — representa uma transformação concreta na forma como desenvolvemos soluções educacionais.",
+        },
+        team: {
+          fullstack: "Desenvolverdor Full Stack",
+          backend: "Desenvolvedor Backend",
+          frontend: "Desenvolvedor Frontend",
+        },
+        credits: {
+          title: "Links",
+          title2: "e Créditos",
+          button: "Repositório GitHub",
+          button2: "Post no LinkedIn",
+          subTitle:
+            "Projeto desenvolvido durante a aprendizagem CentroWeg - Parceria WEG e SENAI",
+          footer: "Portal do Conselho - Projeto acadêmico CentroWeg.",
         },
       },
     },
@@ -909,6 +963,70 @@ export const translations = {
               description: "Growth and adaptation capability",
             },
           ],
+        },
+        learning: {
+          title: "Learnings",
+          title2: "and Conclusion",
+          learnings: [
+            {
+              title: "Challenges Faced",
+              bullets: [
+                {
+                  text: "Tight deadline of only 2 months for complete delivery",
+                },
+                {
+                  text: "Complexity of microservices architecture",
+                },
+                {
+                  text: "Integration of multiple technologies and services",
+                },
+                {
+                  text: "Coordination of a multidisciplinary team",
+                },
+              ],
+            },
+            {
+              title: "Technologies Mastered",
+              bullets: [
+                {
+                  text: "Apache Kafka for messaging and events",
+                },
+                {
+                  text: "Kubernetes for container orchestration",
+                },
+                {
+                  text: "Practical implementation of microservices architecture",
+                },
+                { text: "Integration of AWS services" },
+              ],
+            },
+          ],
+          others: [
+            {
+              title: "Personal Growth",
+              text: "This project represented a significant transformation in the way I develop solutions. The experience of leading a technical team, making complex architectural decisions, and delivering a solution that directly impacts the academic life of hundreds of students was extremely enriching.",
+            },
+            {
+              title: "Future Reflections",
+              text: "Despite the technical complexity and challenging deadline, we managed to deliver a complete, functional, and scalable solution. It is interesting to imagine what would be possible with more time and investment—certainly, we could further explore advanced features such as machine learning for predictive performance analysis and artificial intelligence for pedagogical insights.",
+            },
+          ],
+          phrase:
+            "This project goes beyond technology—it represents a concrete transformation in the way we develop educational solutions.",
+        },
+        team: {
+          fullstack: "Full Stack Developer",
+          backend: "Backend Developer",
+          frontend: "Frontend Developer",
+        },
+        credits: {
+          title: "Links",
+          title2: "and Credits",
+          button: "GitHub Repository",
+          button2: "LinkedIn Post",
+          subTitle:
+            "Project developed during the CentroWeg learning program - Partnership between WEG and SENAI",
+          footer: "Council Portal - Academic project at CentroWeg.",
         },
       },
     },

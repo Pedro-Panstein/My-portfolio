@@ -17,7 +17,7 @@ import Link from "next/link";
 
 export default function MyWork() {
   const [selectedImageCard, setImageCard] = useState(null);
-  const language = useLanguage();
+  const { language, toggleLanguage } = useLanguage();
   const t = translations[language as keyof typeof translations];
 
   //   useEffect(() => {

@@ -11,7 +11,7 @@ interface SliderProps {
 }
 
 export default function Slider({ tecnologies }: SliderProps) {
-  const language = useLanguage();
+  const { language, toggleLanguage } = useLanguage();
   const currentTexts = translations[language as keyof typeof translations];
 
   const handleMouseEnter = (event: React.MouseEvent<HTMLImageElement>) => {

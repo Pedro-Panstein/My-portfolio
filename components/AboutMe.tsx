@@ -6,7 +6,7 @@ import { FaGithub, FaInstagram } from "react-icons/fa";
 import { PiLinkedinLogoBold } from "react-icons/pi";
 
 export default function AboutMe() {
-  const language = useLanguage();
+  const { language, toggleLanguage } = useLanguage();
   const currentTexts = translations[language as keyof typeof translations];
 
   const containerVariants = {

@@ -48,7 +48,7 @@ import councilChat from "@/assets/projects/councilChat.png";
 import { MdManageHistory } from "react-icons/md";
 
 export default function CouncilPortal() {
-  const language = useLanguage();
+  const { language, toggleLanguage } = useLanguage();
   const t = translations[language as keyof typeof translations];
 
   const technologies = {
@@ -152,38 +152,40 @@ export default function CouncilPortal() {
   const team = [
     {
       name: "Pedro Henrique Panstein",
-      role: "Desenvolvedor Full Stack",
+      role: t.projectsPages["council-portal"].team.fullstack,
       image: "/placeholder.svg?height=300&width=300",
-      github: "https://github.com/username",
-      linkedin: "https://linkedin.com/in/username",
+      github: "https://github.com/Pedro-Panstein",
+      linkedin:
+        "https://www.linkedin.com/in/pedro-henrique-panstein-7833bb316/",
     },
     {
       name: "Pedro Augusto Wilhelm",
-      role: "Desenvolvedor Backend",
+      role: t.projectsPages["council-portal"].team.fullstack,
       image: "/placeholder.svg?height=300&width=300",
-      github: "https://github.com/username",
-      linkedin: "https://linkedin.com/in/username",
+      github: "https://github.com/Hivqs79",
+      linkedin: "https://www.linkedin.com/in/pedro-augusto-wilhelm-3b6003281/",
     },
     {
       name: "Mateus Henrique Bosquetti",
-      role: "Desenvolvedor Frontend",
+      role: t.projectsPages["council-portal"].team.fullstack,
       image: "/placeholder.svg?height=300&width=300",
-      github: "https://github.com/username",
-      linkedin: "https://linkedin.com/in/username",
+      github: "https://github.com/mateusbosquetti",
+      linkedin:
+        "https://www.linkedin.com/in/mateus-henrique-bosquetti-2a50bb30b/",
     },
     {
       name: "Kauan Eggert",
-      role: "DevOps Engineer",
+      role: t.projectsPages["council-portal"].team.backend,
       image: "/placeholder.svg?height=300&width=300",
-      github: "https://github.com/username",
-      linkedin: "https://linkedin.com/in/username",
+      github: "https://github.com/kwzzn",
+      linkedin: "https://www.linkedin.com/in/kauan-eggert-38bb0635b/",
     },
     {
       name: "Vinícius Eduardo dos Santos",
-      role: "UX/UI Designer",
+      role: t.projectsPages["council-portal"].team.frontend,
       image: "/placeholder.svg?height=300&width=300",
-      github: "https://github.com/username",
-      linkedin: "https://linkedin.com/in/username",
+      github: "https://github.com/viniciusEStos",
+      linkedin: "#",
     },
   ];
 
@@ -378,7 +380,7 @@ export default function CouncilPortal() {
             <h2 className="text-3xl font-bold text-center mb-2">
               <span className="text-[#13CD51]">
                 {t.projectsPages["council-portal"].Technologies.title}
-              </span>
+              </span>{" "}
               {t.projectsPages["council-portal"].Technologies.title2}
             </h2>
             <div className="h-1 w-20 bg-gradient-to-r from-[#13CD51] to-cyan-500 mx-auto mb-16 rounded-full"></div>
@@ -555,7 +557,10 @@ export default function CouncilPortal() {
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-2">
-              <span className="text-[#13CD51]">Funcionalidades</span> por Perfil
+              <span className="text-[#13CD51]">
+                {t.projectsPages["council-portal"].userProfiles.title}
+              </span>{" "}
+              {t.projectsPages["council-portal"].userProfiles.title2}
             </h2>
             <div className="h-1 w-20 bg-gradient-to-r from-[#13CD51] to-cyan-500 mx-auto mb-16 rounded-full"></div>
 
@@ -862,7 +867,10 @@ export default function CouncilPortal() {
                     {t.projectsPages["council-portal"].results.results[0].title}
                   </h3>
                   <p className="text-gray-200 text-sm">
-                    {t.projectsPages["council-portal"].results.results[0].description}
+                    {
+                      t.projectsPages["council-portal"].results.results[0]
+                        .description
+                    }
                   </p>
                 </CardContent>
               </Card>
@@ -870,9 +878,14 @@ export default function CouncilPortal() {
               <Card className="bg-black/40 backdrop-blur-sm border-[#13CD51]/20 text-center">
                 <CardContent className="p-8">
                   <Zap className="h-12 w-12 text-[#13CD51] mx-auto mb-4" />
-                  <h3 className="text-xl font-bold mb-2">{t.projectsPages["council-portal"].results.results[1].title}</h3>
+                  <h3 className="text-xl font-bold mb-2">
+                    {t.projectsPages["council-portal"].results.results[1].title}
+                  </h3>
                   <p className="text-gray-200 text-sm">
-                    {t.projectsPages["council-portal"].results.results[1].description}
+                    {
+                      t.projectsPages["council-portal"].results.results[1]
+                        .description
+                    }
                   </p>
                 </CardContent>
               </Card>
@@ -880,9 +893,14 @@ export default function CouncilPortal() {
               <Card className="bg-black/40 backdrop-blur-sm border-[#13CD51]/20 text-center">
                 <CardContent className="p-8">
                   <BarChart3 className="h-12 w-12 text-[#13CD51] mx-auto mb-4" />
-                  <h3 className="text-xl font-bold mb-2">{t.projectsPages["council-portal"].results.results[2].title}</h3>
+                  <h3 className="text-xl font-bold mb-2">
+                    {t.projectsPages["council-portal"].results.results[2].title}
+                  </h3>
                   <p className="text-gray-200 text-sm">
-                    {t.projectsPages["council-portal"].results.results[2].description}
+                    {
+                      t.projectsPages["council-portal"].results.results[2]
+                        .description
+                    }
                   </p>
                 </CardContent>
               </Card>
@@ -895,30 +913,62 @@ export default function CouncilPortal() {
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div className="text-center">
                   <CheckCircle className="h-8 w-8 text-[#13CD51] mx-auto mb-3" />
-                  <h4 className="font-semibold mb-2">{t.projectsPages["council-portal"].results.criterias[0].title}</h4>
+                  <h4 className="font-semibold mb-2">
+                    {
+                      t.projectsPages["council-portal"].results.criterias[0]
+                        .title
+                    }
+                  </h4>
                   <p className="text-gray-300 text-sm">
-                    {t.projectsPages["council-portal"].results.criterias[0].description}
+                    {
+                      t.projectsPages["council-portal"].results.criterias[0]
+                        .description
+                    }
                   </p>
                 </div>
                 <div className="text-center">
                   <CheckCircle className="h-8 w-8 text-[#13CD51] mx-auto mb-3" />
-                  <h4 className="font-semibold mb-2">{t.projectsPages["council-portal"].results.criterias[1].title}</h4>
+                  <h4 className="font-semibold mb-2">
+                    {
+                      t.projectsPages["council-portal"].results.criterias[1]
+                        .title
+                    }
+                  </h4>
                   <p className="text-gray-300 text-sm">
-                    {t.projectsPages["council-portal"].results.criterias[1].description}
+                    {
+                      t.projectsPages["council-portal"].results.criterias[1]
+                        .description
+                    }
                   </p>
                 </div>
                 <div className="text-center">
                   <CheckCircle className="h-8 w-8 text-[#13CD51] mx-auto mb-3" />
-                  <h4 className="font-semibold mb-2">{t.projectsPages["council-portal"].results.criterias[2].title}</h4>
+                  <h4 className="font-semibold mb-2">
+                    {
+                      t.projectsPages["council-portal"].results.criterias[2]
+                        .title
+                    }
+                  </h4>
                   <p className="text-gray-300 text-sm">
-                    {t.projectsPages["council-portal"].results.criterias[2].description}
+                    {
+                      t.projectsPages["council-portal"].results.criterias[2]
+                        .description
+                    }
                   </p>
                 </div>
                 <div className="text-center">
                   <CheckCircle className="h-8 w-8 text-[#13CD51] mx-auto mb-3" />
-                  <h4 className="font-semibold mb-2">{t.projectsPages["council-portal"].results.criterias[3].title}</h4>
+                  <h4 className="font-semibold mb-2">
+                    {
+                      t.projectsPages["council-portal"].results.criterias[3]
+                        .title
+                    }
+                  </h4>
                   <p className="text-gray-300 text-sm">
-                    {t.projectsPages["council-portal"].results.criterias[3].description}
+                    {
+                      t.projectsPages["council-portal"].results.criterias[3]
+                        .description
+                    }
                   </p>
                 </div>
               </div>
@@ -930,103 +980,51 @@ export default function CouncilPortal() {
         <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-2">
-              <span className="text-[#13CD51]">Aprendizados</span> e Conclusão
+              <span className="text-[#13CD51]">
+                {t.projectsPages["council-portal"].learning.title}
+              </span>{" "}
+              {t.projectsPages["council-portal"].learning.title2}
             </h2>
             <div className="h-1 w-20 bg-gradient-to-r from-[#13CD51] to-cyan-500 mx-auto mb-16 rounded-full"></div>
 
             <div className="grid md:grid-cols-2 gap-12">
               <div className="space-y-6">
-                <h3 className="text-2xl font-bold text-[#13CD51]">
-                  Desafios Enfrentados
-                </h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-[#13CD51] mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-200">
-                      Prazo apertado de apenas 2 meses para entrega completa
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-[#13CD51] mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-200">
-                      Complexidade da arquitetura em microserviços
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-[#13CD51] mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-200">
-                      Integração de múltiplas tecnologias e serviços
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-[#13CD51] mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-200">
-                      Coordenação de equipe multidisciplinar
-                    </span>
-                  </li>
-                </ul>
-
-                <h3 className="text-2xl font-bold text-[#13CD51]">
-                  Tecnologias Dominadas
-                </h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-[#13CD51] mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-200">
-                      Apache Kafka para mensageria e eventos
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-[#13CD51] mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-200">
-                      Kubernetes para orquestração de containers
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-[#13CD51] mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-200">
-                      Arquitetura de microserviços na prática
-                    </span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <CheckCircle className="h-5 w-5 text-[#13CD51] mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-200">
-                      Integração de serviços AWS
-                    </span>
-                  </li>
-                </ul>
+                {t.projectsPages["council-portal"].learning.learnings.map(
+                  (row, index) => (
+                    <div key={index}>
+                      <h3 className="text-2xl font-bold text-[#13CD51]">
+                        {row.title}
+                      </h3>
+                      <ul className="space-y-3">
+                        {row.bullets.map((row, index) => (
+                          <li key={index} className="flex items-start gap-3">
+                            <CheckCircle className="h-5 w-5 text-[#13CD51] mt-0.5 flex-shrink-0" />
+                            <span className="text-gray-200">{row.text}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )
+                )}
               </div>
 
               <div className="space-y-6">
-                <h3 className="text-2xl font-bold text-[#13CD51]">
-                  Crescimento Pessoal
-                </h3>
-                <p className="text-gray-200 leading-relaxed">
-                  Este projeto representou uma transformação significativa na
-                  minha forma de desenvolver soluções. A experiência de liderar
-                  uma equipe técnica, tomar decisões arquiteturais complexas e
-                  entregar uma solução que impacta diretamente a vida acadêmica
-                  de centenas de alunos foi extremamente enriquecedora.
-                </p>
-
-                <h3 className="text-2xl font-bold text-[#13CD51]">
-                  Reflexões Futuras
-                </h3>
-                <p className="text-gray-200 leading-relaxed">
-                  Apesar da complexidade técnica e do prazo desafiador,
-                  conseguimos entregar uma solução completa, funcional e
-                  escalável. É interessante imaginar o que seria possível com
-                  mais tempo e investimento - certamente poderíamos explorar
-                  ainda mais funcionalidades avançadas como machine learning
-                  para análise preditiva de desempenho e inteligência artificial
-                  para insights pedagógicos.
-                </p>
+                {t.projectsPages["council-portal"].learning.others.map(
+                  (row, index) => (
+                    <div key={index}>
+                      <h3 className="text-2xl font-bold text-[#13CD51]">
+                        {row.title}
+                      </h3>
+                      <p className="text-gray-200 leading-relaxed">
+                        {row.text}
+                      </p>
+                    </div>
+                  )
+                )}
 
                 <div className="backdrop-blur-sm bg-[#13CD51]/10 rounded-xl p-6 border border-[#13CD51]/30">
                   <p className="text-[#8fffb4] italic text-center">
-                    "Este projeto vai além da tecnologia — representa uma
-                    transformação concreta na forma como desenvolvemos soluções
-                    educacionais."
+                    "{t.projectsPages["council-portal"].learning.phrase}"
                   </p>
                 </div>
               </div>
@@ -1058,7 +1056,7 @@ export default function CouncilPortal() {
                         href={member.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-1.5 bg-gray-100 dark:bg-gray-800 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                        className="p-1.5 rounded-md text-[#13CD51] hover:bg-[#13cd518a] transition-colors"
                       >
                         <Github className="h-4 w-4" />
                         <span className="sr-only">GitHub</span>
@@ -1067,7 +1065,7 @@ export default function CouncilPortal() {
                         href={member.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="p-1.5 bg-gray-100 dark:bg-gray-800 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                        className="p-1.5 rounded-md text-[#13CD51] hover:bg-[#13cd518a] transition-colors"
                       >
                         <Linkedin className="h-4 w-4" />
                         <span className="sr-only">LinkedIn</span>
@@ -1084,7 +1082,10 @@ export default function CouncilPortal() {
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-8">
-              <span className="text-[#13CD51]">Links</span> e Créditos
+              <span className="text-[#13CD51]">
+                {t.projectsPages["council-portal"].credits.title}
+              </span>{" "}
+              {t.projectsPages["council-portal"].credits.title2}
             </h2>
 
             <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -1093,33 +1094,29 @@ export default function CouncilPortal() {
                 className="bg-gradient-to-r from-[#13CD51] to-cyan-500 hover:from-[#13CD51] hover:to-cyan-600 text-black font-medium"
               >
                 <Link
-                  href="https://github.com/pedropanstein/portal-do-conselho"
+                  href="https://github.com/Hivqs79/Portal_do_Conselho"
                   target="_blank"
                 >
                   <Github className="h-5 w-5 mr-2" />
-                  Repositório GitHub
+                  {t.projectsPages["council-portal"].credits.button}
                 </Link>
               </Button>
 
               <Button
                 asChild
                 variant="outline"
-                className="border-[#13CD51] text-[#13CD51] hover:bg-[#13CD51]/10"
+                className="border-[#13CD51] text-[#13CD51] hover:text-[#13CD51]/70 hover:bg-[#13CD51]/10"
               >
-                <Link
-                  href="https://linkedin.com/in/pedropanstein"
-                  target="_blank"
-                >
+                <Link href="https://github.com/Pedro-Panstein" target="_blank">
                   <Linkedin className="h-5 w-5 mr-2" />
-                  Post no LinkedIn
+                  {t.projectsPages["council-portal"].credits.button2}
                 </Link>
               </Button>
             </div>
 
             <div className="backdrop-blur-sm bg-black/40 rounded-xl p-8 border border-[#13CD51]/20">
               <p className="text-gray-300 text-sm">
-                Projeto desenvolvido durante a aprendizagem CentroWeg - Parceria
-                WEG e SENAI
+                {t.projectsPages["council-portal"].credits.subTitle}
               </p>
             </div>
           </div>
@@ -1129,8 +1126,8 @@ export default function CouncilPortal() {
         <footer className="py-8 px-4 border-t border-[#13CD51]/20">
           <div className="max-w-6xl mx-auto text-center">
             <p className="text-gray-500 text-sm">
-              © {new Date().getFullYear()} Pedro Panstein. Portal do Conselho -
-              Projeto acadêmico CentroWeg.
+              © {new Date().getFullYear()} Pedro Panstein.{" "}
+              {t.projectsPages["council-portal"].credits.footer}
             </p>
           </div>
         </footer>

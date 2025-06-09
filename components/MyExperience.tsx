@@ -5,7 +5,7 @@ import useLanguage from "@/hooks/useLanguage";
 import { translations } from "../locales/translation";
 
 export default function MyExperience() {
-  const language = useLanguage();
+  const { language, toggleLanguage } = useLanguage();
   const t = translations[language as keyof typeof translations];
 
   const fadeInVariants = {
