@@ -23,6 +23,7 @@ const useLanguage = () => {
     const newLang = language === "pt" ? "en" : "pt";
     setLanguage(newLang);
     localStorage.setItem("lang", newLang);
+    window.location.reload();
   };
 
   return { language, toggleLanguage };
