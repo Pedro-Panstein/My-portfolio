@@ -1107,7 +1107,7 @@ export default function CouncilPortal() {
                 variant="outline"
                 className="border-[#13CD51] text-[#13CD51] hover:text-[#13CD51]/70 hover:bg-[#13CD51]/10"
               >
-                <Link href="https://github.com/Pedro-Panstein" target="_blank">
+                <Link href="https://www.linkedin.com/feed/update/urn:li:activity:7327301508738269184/" target="_blank">
                   <Linkedin className="h-5 w-5 mr-2" />
                   {t.projectsPages["council-portal"].credits.button2}
                 </Link>
