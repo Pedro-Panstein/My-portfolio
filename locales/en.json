@@ -1,0 +1,727 @@
+{
+  "en": {
+    "hello": "Hello World! My name is",
+    "hello2": "and i am a",
+    "job": ["Full stack", "Developer"],
+    "description": "I turn needs into real, evolving, and functional applications. I develop systems through my passion for technology, contributing innovative and effective solutions to complex challenges.",
+    "angular": "Angular",
+    "aws": "AWS",
+    "docker": "Docker",
+    "firebase": "Firebase",
+    "git": "GIT",
+    "js": "Javascript",
+    "ts": "TypeScript",
+    "kafka": "Kafka",
+    "kotlin": "Kotlin",
+    "kubernetes": "Kubernetes",
+    "mongoDB": "MongoDB",
+    "mysql": "MySQL",
+    "nodejs": "Node.js",
+    "python": "Python",
+    "react": "React",
+    "spring": "Spring",
+    "tailwind": "Tailwind",
+    "java": "Java",
+    "next": "Next",
+    "tecnologiesTitle": "Technologies",
+    "year": "Years",
+    "experience": "of Experience",
+    "myExperience": "My Experience",
+    "myExperienceDescription": "My professional and academic journey in the world of technology.",
+    "experienceContent": {
+      "experience": {
+        "title": "Experience",
+        "experiences": [
+          {
+            "title": "Systems Developer",
+            "company": "WEG",
+            "period": "2025 - Present",
+            "description": "Responsible for the development and maintenance of WEG's internal systems in the Accounts Payable sector, with a focus on process automation and handling technical demands. Primarily using the ServiceNow platform, integrating solutions with JavaScript and Angular, applying best development practices to ensure efficient and high-quality deliveries."
+          },
+          {
+            "title": "Freelancer – Website Development for RICADI Insurance Brokerage",
+            "company": "WEG",
+            "period": "2025",
+            "description": "Invited by RICADI Insurance Brokerage to develop a modern and functional landing page, focusing on user experience and clear communication of offered services. Worked directly with the company's owners and team, actively participating in the creative process, proposing solutions, adjusting the design based on feedback, and ensuring a professional result aligned with the client’s needs."
+          },
+          {
+            "title": "Apprentice",
+            "company": "WEG + SENAI",
+            "period": "2023 - 2025",
+            "description": "Participation in a technical training program (CentroWEG), focused on system development and IT fundamentals. Acquired solid knowledge in programming logic, microservices, software architecture, agile methodologies, operating systems, and networks. Developed projects using Java, Node.js, Kafka, Docker, and modern frameworks for web and mobile development, focusing on best practices, performance, and scalability."
+          }
+        ]
+      },
+      "education": {
+        "title": "Education",
+        "educations": [
+          {
+            "title": "Complete Java Course - Basic to Advanced",
+            "institution": "Udemy",
+            "period": "2024",
+            "description": "Intensive Java training focused on modern development using Spring Boot. The course covers the fundamentals of the language to advanced topics, including REST API creation, database integration, security, testing, and full application deployment with market practices."
+          },
+          {
+            "title": "Advanced Web Development Course",
+            "institution": "Udemy",
+            "period": "2023 - 2024",
+            "description": "Advanced training in frontend web development, focusing on Angular, Next.js, and TypeScript. The course also covered essential concepts of UI/UX, accessibility, performance, modern project structuring, and integration with RESTful APIs."
+          },
+          {
+            "title": "Programming Elective",
+            "institution": "Alfa Jangada",
+            "period": "2021 - 2022",
+            "description": "Introduction to web development focused on creating simple pages and websites. Learned fundamentals of HTML, CSS, JavaScript, and programming logic, laying the foundation for evolution in web technologies."
+          }
+        ]
+      }
+    },
+
+    "aboutMeTitle": "About Me",
+    "aboutMeWhoAmI": "Who Am I",
+    "aboutMeName": "Pedro Henrique Panstein",
+    "aboutMeJobTitle": "Fullstack Developer",
+    "aboutMeDescription": "My name is Pedro Henrique, I am a Fullstack developer passionate about technology and innovation. I transform ideas into digital solutions, combining creativity and efficiency. Focused on frontend and backend development, I aim to deliver functional, modern, and intuitive projects. I love challenges and I am always learning something new to enhance my skills and create amazing experiences.",
+
+    "myWorkTitle": "My Work",
+    "myWorkSubtitle": "Check out the featured projects",
+    "projects": [
+      {
+        "title": "Council Portal",
+        "description": "System selected by SENAI to digitize Professional Councils, eliminating delays and modernizing a process that was previously 100% in-person."
+      },
+      {
+        "title": "Machine Management",
+        "description": "Machine monitoring system developed with a modern architecture based on microservices, asynchronous messaging, and distributed processing, ensuring high scalability, performance, and proactive fault detection."
+      },
+      {
+        "title": "Plasma Docs",
+        "description": "Wikipedia-style platform focused on developers, with practical documentation and real-world examples. It already includes a complete guide on GitHub and GitHub CLI."
+      },
+      {
+        "title": "RICADI",
+        "description": "Modern and responsive institutional website for a real insurance brokerage, focusing on usability, performance, and direct contact for personalized quotes."
+      },
+      {
+        "title": "CRUD Users",
+        "description": "User CRUD developed with Angular, emphasizing usability, a modern layout, and integration with a cloud database."
+      },
+      {
+        "title": "Cash Control Hub",
+        "description": "Personal financial control system with interactive charts, CSV import/export, and automatic alerts—ideal for organizing and analyzing your finances with clarity."
+      },
+      {
+        "title": "More information coming soon",
+        "description": "A new project will be added shortly."
+      }
+    ],
+
+    "myServicesTitle": "My Services",
+    "myServicesSubtitle": "How can I help your business grow and stand out in the digital market?",
+    "services": [
+      {
+        "title": "Websites, Landing Pages, and Designs",
+        "description": "Design solutions and interfaces that combine aesthetics and functionality, providing memorable user experiences."
+      },
+      {
+        "title": "API and Database",
+        "description": "Complete API and database solutions that help your system organize, store, and efficiently manage information."
+      },
+      {
+        "title": "SEO",
+        "description": "Performance enhancement and optimization for search engines, with strategies that increase your business’s online visibility."
+      },
+      {
+        "title": "Progressive Web Applications",
+        "description": "Development of PWAs that work offline and offer an experience similar to native apps, increasing user engagement."
+      },
+      {
+        "title": "Technical Consulting",
+        "description": "Analysis and recommendations to improve your technological infrastructure, optimize processes, and implement best development practices."
+      },
+      {
+        "title": "Maintenance and Support",
+        "description": "Ongoing maintenance, updates, and technical support services to ensure your applications work perfectly in the long run."
+      }
+    ],
+
+    "projectsPages": {
+      "council-portal": {
+        "navbar": "Return to portfolio",
+        "hero": {
+          "highligh": "Projeto Selecionado pelo SENAI",
+          "title": "Council ",
+          "title2": "Portal",
+          "description": "Digital solution for Class Councils developed during the CentroWeg apprenticeship (WEG + SENAI)",
+          "calendar": "2 months of development",
+          "devs": "5 developers",
+          "winner": "Winner Project"
+        },
+        "summary": {
+          "title": "Summary",
+          "title2": "of the Project",
+          "challenge": {
+            "title": "The Challenge",
+            "description": "The process of Class Councils and feedback distribution was carried out 100% in person, causing delays of up to two months in sharing results with students. It was necessary to digitize and optimize the entire workflow."
+          },
+          "solution": {
+            "title": "The Solution",
+            "description": "We developed a complete web platform that digitizes the entire process, from organizing the councils to distributing feedback, with real-time communication and dashboards for monitoring."
+          },
+          "team": {
+            "title": "Development Team",
+            "me": "Me"
+          },
+          "months": "2 months",
+          "months2": "of development",
+          "microservice": "6",
+          "microservice2": "microservices",
+          "profileUsers": "5",
+          "profileUsers2": "user profiles",
+          "winner": "1st",
+          "winner2": "place among 4 teams"
+        },
+        "Technologies": {
+          "title": "Technologies",
+          "title2": "used",
+          "infra": "Infrastructure"
+        },
+        "architecture": {
+          "title": "Architecture",
+          "title2": "and Infrastructure",
+          "microservice": {
+            "title": "Microservices",
+            "description": "The architecture was designed with 6 independent microservices, ensuring scalability, maintainability, and responsibility isolation. Each service has its own database and can be developed and deployed independently."
+          },
+          "kafka": {
+            "title": "Apache Kafka",
+            "description": "We use Kafka as an event bus to ensure asynchronous communication, decoupling between services, scalability in message exchange, and system resilience. Essential for real-time notifications and internal chat."
+          },
+          "decoupling": {
+            "title": "Decoupling",
+            "description": "Independent services communicating via events, allowing isolated evolution of each component."
+          },
+          "escalability": {
+            "title": "Scalability",
+            "description": "Each microservice can be scaled independently according to specific demand."
+          },
+          "resiliency": {
+            "title": "Resilience",
+            "description": "Failures in one service do not compromise the operation of the other system components."
+          }
+        },
+        "userProfiles": {
+          "title": "Features",
+          "title2": "by Profile",
+          "student": {
+            "title": "Students",
+            "description": "Viewing feedback and tracking academic performance",
+            "features": [
+              "Receiving feedback",
+              "Performance tracking",
+              "Academic history"
+            ]
+          },
+          "leader": {
+            "title": "Class Representatives",
+            "description": "Student features + completion of the class pre-council",
+            "features": [
+              "All student functions",
+              "Pre-council completion",
+              "Class representation"
+            ]
+          },
+          "teacher": {
+            "title": "Teachers",
+            "description": "Recording feedback and consulting student history",
+            "features": [
+              "Feedback recording",
+              "Student history consultation",
+              "Class monitoring"
+            ]
+          },
+          "pedagogic": {
+            "title": "Pedagogues",
+            "description": "Complete management of councils and feedback distribution",
+            "features": [
+              "Council organization",
+              "Class management",
+              "Feedback distribution",
+              "Indicator analysis"
+            ]
+          },
+          "supervisors": {
+            "title": "Supervisors",
+            "description": "Access to dashboards with consolidated data and historical records",
+            "features": [
+              "Executive dashboards",
+              "Consolidated data",
+              "Council history",
+              "Management reports"
+            ]
+          },
+          "admin": {
+            "title": "Administrator",
+            "description": "A single account that can only manage classes and users",
+            "features": ["Class management", "User management"]
+          }
+        },
+        "chat": {
+          "title": "Chat",
+          "title2": "Internal",
+          "descriptions": {
+            "title": "Real-Time Communication",
+            "description": "Integrated chat system that allows direct communication between educators and other users, ensuring centralization and pedagogical focus in conversations.",
+            "topics": [
+              {
+                "title": "Educators",
+                "description": "Can initiate conversations with any user in the system"
+              },
+              {
+                "title": "Other Users",
+                "description": "Can only communicate with educators, ensuring centralization"
+              },
+              {
+                "title": "Real-Time",
+                "description": "Instant communication via Kafka + Event Source"
+              }
+            ]
+          }
+        },
+        "timeline": {
+          "title": "Timeline",
+          "title2": "Development",
+          "line": [
+            {
+              "phase": "Discovery",
+              "title": "Meeting with Pedagogical Team",
+              "description": "Requirement gathering and problem understanding"
+            },
+            {
+              "phase": "Planning",
+              "title": "Requirement Analysis",
+              "description": "Definition of system functionalities and architecture"
+            },
+            {
+              "phase": "Prototyping",
+              "title": "Wireframes in Figma",
+              "description": "Creation of simple prototypes for initial validation"
+            },
+            {
+              "phase": "Design",
+              "title": "High-Fidelity Prototype",
+              "description": "Interface refinement after pedagogical team approval"
+            },
+            {
+              "phase": "Frontend",
+              "title": "Interface Development",
+              "description": "Implementation of screens and components in Next.js"
+            },
+            {
+              "phase": "Backend",
+              "title": "APIs and Microservices",
+              "description": "Development of 6 microservices and integration with Kafka"
+            },
+            {
+              "phase": "DevOps",
+              "title": "Infrastructure",
+              "description": "Containerization with Docker and orchestration with Kubernetes"
+            },
+            {
+              "phase": "Presentation",
+              "title": "Demo for Stakeholders",
+              "description": "Presentation to 4 IT classes + teachers + coordination"
+            },
+            {
+              "phase": "Approval",
+              "title": "Selection by SENAI",
+              "description": "Project chosen for official implementation"
+            }
+          ]
+        },
+        "interface": {
+          "title": "Interface",
+          "title2": "System",
+          "subTitles": [
+            {
+              "text": "Main Dashboard"
+            },
+            {
+              "text": "Student Feedback"
+            },
+            {
+              "text": "Council Management"
+            },
+            {
+              "text": "Reports & Analytics"
+            }
+          ],
+          "desktop": "Desktop Interface",
+          "mobile": "Mobile Responsive"
+        },
+        "results": {
+          "title": "Results",
+          "title2": "and Recognition",
+          "results": [
+            {
+              "title": "Selected Project",
+              "description": "Chosen by SENAI among 4 participating teams for official implementation"
+            },
+            {
+              "title": "Deadline Reduction",
+              "description": "From 2 months to instant feedback release for students"
+            },
+            {
+              "title": "Standardization",
+              "description": "Unified and standardized process for all class councils"
+            }
+          ],
+          "title3": "Evaluation Criteria",
+          "criterias": [
+            {
+              "title": "Technical Feasibility",
+              "description": "Solid architecture and appropriate technologies"
+            },
+            {
+              "title": "Usability",
+              "description": "Intuitive interface and user experience"
+            },
+            {
+              "title": "Institutional Impact",
+              "description": "Direct benefits for the institution"
+            },
+
+            {
+              "title": "Scalability",
+              "description": "Growth and adaptation capability"
+            }
+          ]
+        },
+        "learning": {
+          "title": "Learnings",
+          "title2": "and Conclusion",
+          "learnings": [
+            {
+              "title": "Challenges Faced",
+              "bullets": [
+                {
+                  "text": "Tight deadline of only 2 months for complete delivery"
+                },
+                {
+                  "text": "Complexity of microservices architecture"
+                },
+                {
+                  "text": "Integration of multiple technologies and services"
+                },
+                {
+                  "text": "Coordination of a multidisciplinary team"
+                }
+              ]
+            },
+            {
+              "title": "Technologies Mastered",
+              "bullets": [
+                {
+                  "text": "Apache Kafka for messaging and events"
+                },
+                {
+                  "text": "Kubernetes for container orchestration"
+                },
+                {
+                  "text": "Practical implementation of microservices architecture"
+                },
+                { "text": "Integration of AWS services" }
+              ]
+            }
+          ],
+          "others": [
+            {
+              "title": "Personal Growth",
+              "text": "This project represented a significant transformation in the way I develop solutions. The experience of leading a technical team, making complex architectural decisions, and delivering a solution that directly impacts the academic life of hundreds of students was extremely enriching."
+            },
+            {
+              "title": "Future Reflections",
+              "text": "Despite the technical complexity and challenging deadline, we managed to deliver a complete, functional, and scalable solution. It is interesting to imagine what would be possible with more time and investment—certainly, we could further explore advanced features such as machine learning for predictive performance analysis and artificial intelligence for pedagogical insights."
+            }
+          ],
+          "phrase": "This project goes beyond technology—it represents a concrete transformation in the way we develop educational solutions."
+        },
+        "team": {
+          "fullstack": "Full Stack Developer",
+          "backend": "Backend Developer",
+          "frontend": "Frontend Developer"
+        },
+        "credits": {
+          "title": "Links",
+          "title2": "and Credits",
+          "button": "GitHub Repository",
+          "button2": "LinkedIn Post",
+          "subTitle": "Project developed during the CentroWeg learning program - Partnership between WEG and SENAI",
+          "footer": "Council Portal - Academic project at CentroWeg."
+        }
+      },
+      "machine-management": {
+        "navbar": "Back to Portfolio",
+        "hero": {
+          "highligh": "Professional project for industries",
+          "title": "Machine ",
+          "title2": "Management",
+          "description": "Digital solution for industrial monitoring with microservices architecture",
+          "calendar": "1.5 months of development",
+          "devs": "2 developers",
+          "winner": "Challenging project"
+        },
+        "summary": {
+          "title": "Project ",
+          "title2": "Overview",
+          "challenge": {
+            "title": "The Challenge",
+            "description": "During the initial testing phase of the machine monitoring system, we faced critical performance issues in high-volume data scenarios. It was necessary to redesign the entire architecture to ensure scalability, reliability, and real-time responsiveness."
+          },
+          "solution": {
+            "title": "The Solution",
+            "description": "We restructured the system using an architecture based on microservices, asynchronous messaging, and distributed processing. The new platform performs real-time monitoring with efficient service communication, interactive dashboards, and automatic fault alerts."
+          },
+          "team": {
+            "title": "Development Team",
+            "me": "Me"
+          },
+          "months": "1.5 months",
+          "months2": "of development",
+          "microservice": "4",
+          "microservice2": "specialized microservices",
+          "profileUsers": "4",
+          "profileUsers2": "distinct user profiles",
+          "winner": "∞",
+          "winner2": "Challenging project"
+        },
+
+        "Technologies": {
+          "title": "Technologies",
+          "title2": "used",
+          "infra": "Infrastructure"
+        },
+        "architecture": {
+          "title": "Architecture",
+          "title2": "and Infrastructure",
+          "microservice": {
+            "title": "Microservices",
+            "description": "The architecture was designed with 4 independent microservices, ensuring scalability, maintainability, and clear separation of responsibilities. Each service has its own database and can be developed and deployed independently."
+          },
+          "kafka": {
+            "title": "Apache Kafka",
+            "description": "Kafka was used as the event bus to enable asynchronous communication, service decoupling, scalable message exchange, machine data handling, and system resilience. It is essential for real-time notifications and fault alerts."
+          },
+          "decoupling": {
+            "title": "Decoupling",
+            "description": "Independent services that communicate via events, allowing each component to evolve in isolation."
+          },
+          "scalability": {
+            "title": "Scalability",
+            "description": "Each microservice can be scaled independently according to specific demand."
+          },
+          "resiliency": {
+            "title": "Resilience",
+            "description": "Failures in a single service do not affect the functionality of the other system components."
+          }
+        },
+
+        "userProfiles": {
+          "title": "Features",
+          "title2": "by User Profile",
+          "student": {
+            "title": "Operators",
+            "description": "Monitor machine data through a dashboard that displays operational conditions.",
+            "features": [
+              "Alert reception",
+              "Performance tracking",
+              "Operation history"
+            ]
+          },
+          "leader": {
+            "title": "Managers",
+            "description": "Receive immediate notifications about critical events (failures, performance anomalies) to take timely action.",
+            "features": [
+              "All operator functions",
+              "User management with visibility over machine performance",
+              "Instant notification of failures and performance anomalies"
+            ]
+          },
+          "teacher": {
+            "title": "Analysts",
+            "description": "Analyze the data sent by factory machines to the monitoring system, which centralizes information on a server.",
+            "features": [
+              "Anomaly logging",
+              "Historical data consultation",
+              "Performance monitoring"
+            ]
+          },
+          "pedagogic": {
+            "title": "Administrators",
+            "description": "Full management of users, machine registration, and alert distribution.",
+            "features": [
+              "Machine organization",
+              "User administration",
+              "Alert distribution",
+              "Indicator analysis"
+            ]
+          }
+        },
+        "timeline": {
+          "title": "Timeline",
+          "title2": "of Development",
+          "line": [
+            {
+              "phase": "Discovery",
+              "title": "Meeting with the PO (CTW course professor)",
+              "description": "Requirements gathering and problem understanding"
+            },
+            {
+              "phase": "Planning",
+              "title": "Requirements Analysis",
+              "description": "Definition of system features and architecture"
+            },
+            {
+              "phase": "Prototyping",
+              "title": "Wireframes in Figma",
+              "description": "Creation of basic prototypes for initial validation"
+            },
+            {
+              "phase": "Design",
+              "title": "High-Fidelity Prototype",
+              "description": "Interface refinement following PO approval"
+            },
+            {
+              "phase": "Backend",
+              "title": "APIs and Microservices",
+              "description": "Development of a draft version of 4 microservices and integration with Kafka"
+            },
+            {
+              "phase": "Frontend",
+              "title": "Interface Development",
+              "description": "Implementation of screens and components in React"
+            },
+            {
+              "phase": "DevOps",
+              "title": "Infrastructure",
+              "description": "Containerization with Docker and monitoring integration using Prometheus and Grafana"
+            },
+            {
+              "phase": "Presentation",
+              "title": "Demo for PO and approval for next steps",
+              "description": "System presentation to the professor of the software architecture course at CTW"
+            },
+            {
+              "phase": "Approval",
+              "title": "Approved for continuation and enhancement",
+              "description": "Project approved for further development and optimization, focusing on performance and scalability"
+            },
+            {
+              "phase": "Paused",
+              "title": "Paused due to other ongoing projects (such as the Council Portal)",
+              "description": "Project temporarily on hold to prioritize other demands, but with potential for future resumption"
+            }
+          ]
+        },
+        "results": {
+          "title": "Results",
+          "title2": "and Recognition",
+          "results": [
+            {
+              "title": "Extensive Learning",
+              "description": "Development of advanced skills in microservices architecture and asynchronous messaging"
+            },
+            {
+              "title": "Reduced Timelines",
+              "description": "Enhanced monitoring system with real-time responsiveness and interactive visualizations"
+            },
+            {
+              "title": "Standardization",
+              "description": "Unified and standardized process for all system users"
+            }
+          ],
+          "title3": "Evaluation Criteria",
+          "criterias": [
+            {
+              "title": "Technical Feasibility",
+              "description": "Robust architecture and appropriate technologies"
+            },
+            {
+              "title": "Usability",
+              "description": "Intuitive interface and user experience"
+            },
+            {
+              "title": "Institutional Impact",
+              "description": "Direct benefits for industrial operations"
+            },
+            {
+              "title": "Scalability",
+              "description": "Capacity for growth and adaptability"
+            }
+          ]
+        },
+        "learning": {
+          "title": "Learnings",
+          "title2": "and Conclusion",
+          "learnings": [
+            {
+              "title": "Challenges Faced",
+              "bullets": [
+                {
+                  "text": "Tight deadline of just 1.5 months for partial project delivery"
+                },
+                {
+                  "text": "Complexity of microservices architecture"
+                },
+                {
+                  "text": "Integration of multiple technologies and services"
+                },
+                {
+                  "text": "Team coordination and alignment with the PO"
+                }
+              ]
+            },
+            {
+              "title": "Technologies Mastered",
+              "bullets": [
+                { "text": "Apache Kafka for messaging and events" },
+                { "text": "Docker for containerization" },
+                {
+                  "text": "Hands-on experience with microservices architecture"
+                },
+                { "text": "Integration with tools like Prometheus and Grafana" }
+              ]
+            }
+          ],
+          "others": [
+            {
+              "title": "Personal Growth",
+              "text": "This project marked a significant transformation in how I approach solution development. Leading a technical team, making complex architectural decisions, and delivering a solution with direct impact on industrial systems proved to be an incredibly enriching experience."
+            },
+            {
+              "title": "Future Reflections",
+              "text": "Despite the technical complexity and challenging deadline, we succeeded in delivering an advanced, functional, and scalable initial solution. There's clear potential to further explore advanced features like machine learning for predictive performance analysis and artificial intelligence for insights and forecast modeling."
+            }
+          ]
+        },
+        "team": {
+          "fullstack": "Full Stack Developer",
+          "backend": "Backend Developer",
+          "frontend": "Frontend Developer"
+        },
+        "credits": {
+          "title": "Links",
+          "title2": "and Credits",
+          "button": "GitHub Repository",
+          "button2": "LinkedIn Post",
+          "subTitle": "Project developed during CentroWeg training",
+          "footer": "Machine Management – Academic project from CentroWeg."
+        }
+      }
+    },
+
+    "footerTitle": "Contact",
+    "footerSubtitle": "Let's work together!",
+    "footerDescription": "Get in touch or follow my social media!"
+  }
+}
