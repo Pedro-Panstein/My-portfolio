@@ -44,6 +44,7 @@ export default function MyWork() {
       title: t.projects[0].title,
       description: t.projects[0].description,
       url: "/projects/council-portal",
+      blank: false,
       tags: ["Next.js", "Java", "Phyton", "Kafka", "+12"],
     },
     {
@@ -52,6 +53,7 @@ export default function MyWork() {
       title: t.projects[1].title,
       description: t.projects[1].description,
       url: "/projects/machine-management",
+      blank: false,
       tags: ["React", "Kafka", "Docker", "GraphQL", "+5"],
     },
     {
@@ -59,7 +61,8 @@ export default function MyWork() {
       image: plasmaDocs,
       title: t.projects[2].title,
       description: t.projects[2].description,
-      url: "/projects/plasma-docs",
+      blank: true,
+      url: "https://plasma-docs-dev.vercel.app/",
       tags: ["Next.js", "Shadcn", "Tailwind CSS", "TypeScript"],
     },
     {
@@ -67,6 +70,7 @@ export default function MyWork() {
       image: ricadi,
       title: t.projects[3].title,
       description: t.projects[3].description,
+      blank: true,
       url: "/projects/ricadi",
       tags: ["React", "Tailwind Css", "Firebase", "CI/CD", "+2"],
     },
@@ -75,6 +79,7 @@ export default function MyWork() {
       image: crudUsers,
       title: t.projects[4].title,
       description: t.projects[4].description,
+      blank: false,
       url: "/projects/crud-users",
       tags: ["Angular", "Angular Material", "SCSS", "Firebase"],
     },
@@ -83,6 +88,7 @@ export default function MyWork() {
       image: cashControlHub,
       title: t.projects[5].title,
       description: t.projects[5].description,
+      blank: false,
       url: "/projects/cash-control-hub",
       tags: ["Next.js", "Recharts", "Tailwind CSS", "TypeScript"],
     },
@@ -130,25 +136,53 @@ export default function MyWork() {
               className="relative group overflow-hidden bg-black/40 backdrop-blur-sm border-[3px] border-[#13CD51]/10 hover:border-[#13CD51]/80 transition-all duration-300"
             >
               <div className="relative overflow-hidden h-48">
-                <Link href={project.url}>
-                  <Image
-                    src={project.image || "/placeholder.svg"}
-                    alt={project.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
-                </Link>
-                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                {project.blank ? (
+                  <a  target="_blank" href={project.url}>
+                    <Image
+                      src={project.image || "/placeholder.svg"}
+                      alt={project.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
+                  </a>
+                ) : (
                   <Link href={project.url}>
-                    <Button
-                      size="icon"
-                      variant="outline"
-                      className="h-8 w-8 rounded-full bg-black/50 border-[#13CD51]/50"
-                    >
-                      <ExternalLink className="h-4 w-4 text-[#13CD51]" />
-                    </Button>
+                    <Image
+                      src={project.image || "/placeholder.svg"}
+                      alt={project.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-60"></div>
                   </Link>
+                )}
+                <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity">
+                  {project.blank ? (
+                    <a
+                      target="_blank"
+                      href={project.url}
+                      rel="noopener noreferrer"
+                    >
+                      <Button
+                        size="icon"
+                        variant="outline"
+                        className="h-8 w-8 rounded-full bg-black/50 border-[#13CD51]/50"
+                      >
+                        <ExternalLink className="h-4 w-4 text-[#13CD51]" />
+                      </Button>
+                    </a>
+                  ) : (
+                    <Link href={project.url}>
+                      <Button
+                        size="icon"
+                        variant="outline"
+                        className="h-8 w-8 rounded-full bg-black/50 border-[#13CD51]/50"
+                      >
+                        <ExternalLink className="h-4 w-4 text-[#13CD51]" />
+                      </Button>
+                    </Link>
+                  )}
                 </div>
               </div>
               <CardContent className="p-6">
